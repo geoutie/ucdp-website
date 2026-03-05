@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="icon" type="image/png" href="logo.png"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Donate & Support – UCDP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    /* ── DONATE PAGE ── */
+    .donate-step {
+      background: var(--white); border-radius:16px;
+      padding:28px 32px; margin-bottom:20px;
+      border:1px solid rgba(201,160,106,0.18);
+      box-shadow:0 2px 12px rgba(43,26,15,0.05);
+    }
+    .donate-step-head { display:flex; align-items:center; gap:14px; margin-bottom:20px; }
+    .step-num-badge {
+      width:32px; height:32px; border-radius:50%; flex-shrink:0;
+      background:linear-gradient(135deg,var(--brown),var(--tan));
+      color:var(--white); font-family:'Playfair Display',serif;
+      font-weight:900; font-size:0.95rem;
+      display:flex; align-items:center; justify-content:center;
+    }
+    .donate-step-head h3 { font-family:'Playfair Display',serif; font-weight:700; color:var(--brown); font-size:1rem; margin:0; }
+    .freq-tabs { display:flex; gap:8px; flex-wrap:wrap; }
+    .freq-tab {
+      padding:10px 20px; border-radius:40px; cursor:pointer;
+      border:1.5px solid rgba(201,160,106,0.4); font-weight:700;
+      font-size:0.85rem; color:var(--brown); background:var(--cream);
+      transition:all 0.2s; user-select:none;
+    }
+    .freq-tab.active { background:var(--brown); color:var(--white); border-color:var(--brown); }
+    .donate-select {
+      width:100%; padding:12px 16px;
+      border:1.5px solid rgba(201,160,106,0.35); border-radius:10px;
+      font-size:0.93rem; font-family:inherit; color:var(--dark);
+      background:var(--white); cursor:pointer; outline:none; margin-bottom:14px;
+    }
+    .impact-hint {
+      background:rgba(212,168,70,0.1); border-left:4px solid var(--gold);
+      padding:14px 18px; border-radius:10px;
+      font-size:0.87rem; color:var(--brown); line-height:1.65;
+    }
+    .amount-pills { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:4px; }
+    .amt-pill {
+      padding:10px 18px; border-radius:40px; cursor:pointer;
+      border:1.5px solid rgba(201,160,106,0.4); font-weight:700;
+      font-size:0.85rem; color:var(--brown); background:var(--cream);
+      transition:all 0.2s;
+    }
+    .amt-pill.active { background:var(--brown); color:var(--white); border-color:var(--brown); }
+    .payment-tabs { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:20px; }
+    .pay-tab {
+      display:flex; align-items:center; gap:8px;
+      padding:10px 20px; border-radius:40px; cursor:pointer;
+      border:1.5px solid rgba(201,160,106,0.4); font-weight:700;
+      font-size:0.85rem; color:var(--brown); background:var(--cream);
+      transition:all 0.2s;
+    }
+    .pay-tab.active { background:var(--brown); color:var(--white); border-color:var(--brown); }
+    .pay-panel { display:none; }
+    .pay-panel.active { display:block; }
+    .form-group { margin-bottom:14px; }
+    .form-group label { display:block; font-size:0.78rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:var(--muted); margin-bottom:6px; }
+    .donate-input {
+      width:100%; padding:11px 14px; box-sizing:border-box;
+      border:1.5px solid rgba(201,160,106,0.35); border-radius:10px;
+      font-size:0.92rem; font-family:inherit; background:var(--white);
+      color:var(--dark); outline:none;
+    }
+    .donate-summary-row {
+      display:flex; justify-content:space-between; align-items:center;
+      padding:10px 0; border-bottom:1px solid rgba(201,160,106,0.15);
+      font-size:0.88rem; color:var(--muted);
+    }
+    .total-row { border-top:2px solid rgba(201,160,106,0.25); border-bottom:none; margin-top:6px; padding-top:14px; font-size:1rem; color:var(--brown); font-weight:700; }
+    .donate-btn {
+      width:100%; padding:16px; margin-top:18px;
+      background:linear-gradient(135deg,var(--brown),var(--tan));
+      color:var(--white); border:none; border-radius:12px;
+      font-family:'Playfair Display',serif; font-weight:900; font-size:1rem;
+      cursor:pointer; transition:opacity 0.2s;
+    }
+    .donate-btn:hover { opacity:0.88; }
+    .mpesa-sub {
+      padding:8px 20px; border-radius:40px; cursor:pointer;
+      border:1.5px solid rgba(201,160,106,0.4); font-weight:700;
+      font-size:0.82rem; color:var(--brown); background:var(--cream);
+      transition:all 0.2s;
+    }
+    .mpesa-sub.active { background:var(--gold); color:var(--dark); border-color:var(--gold); }
+    @media (max-width:600px) {
+      .donate-step { padding:20px 18px; }
+      .freq-tabs, .amount-pills, .payment-tabs { gap:6px; }
+    }
+  </style>
+</head>
+<body>
+
+      <nav>
+    <a href="index.html" class="nav-logo">
+      <img src="logo.png" alt="UCDP Logo"/>
+      <div><div class="org-name">Uhuru Community Development Project</div><div class="org-sub">Kisumu, Kenya</div></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" >Home</a></li>
+      <li>
+        <a href="about.html" >About Us <span class="chevron">▼</span></a>
+        <div class="dropdown">
+          <span class="dropdown-label">About UCDP</span>
+          <a href="about.html#story"><div class="d-text">Our Story<small>How UCDP began in 2002</small></div></a>
+          <a href="about.html#timeline"><div class="d-text">Our Journey<small>Milestones over the years</small></div></a>
+          <a href="about.html#values"><div class="d-text">Our Values<small>What guides everything we do</small></div></a>
+          <a href="about.html#team"><div class="d-text">Our Team<small>The people behind UCDP</small></div></a>
+        </div>
+      </li>
+      <li>
+        <a href="projects.html">Our Projects <span class="chevron">▼</span></a>
+        <div class="dropdown wide">
+          <span class="dropdown-label">Our 5 Projects</span>
+          <div class="dropdown-grid">
+            <a href="projects/mobile-youth-advocacy.html" style="grid-column:1/-1; background:rgba(212,168,70,0.08); border-radius:8px; margin-bottom:2px;">
+              <div class="d-text"><strong>Mobile Youth Work &amp; Child Advocacy</strong><small>Our flagship outreach project</small></div>
+            </a>
+          </div>
+          <div style="padding:4px 12px 4px; font-size:0.65rem; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted);">Activities under this project</div>
+          <div class="dropdown-grid">
+            <a href="projects/sanitary-pads.html"><div class="d-text">Sanitary Pads<small>Girls under 18, all sub-counties</small></div></a>
+            <a href="projects/relief-food.html"><div class="d-text">Relief Food<small>Children 5 &amp; below</small></div></a>
+            <a href="projects/school-sponsorship.html"><div class="d-text">School Sponsorship<small>Fee support for needy students</small></div></a>
+            <a href="projects/street-work.html"><div class="d-text">Street Work<small>Outreach &amp; reintegration</small></div></a>
+            <a href="projects/safe-house.html"><div class="d-text">Safe House<small>Shelter for street girls</small></div></a>
+            <a href="projects/lobby-advocacy.html"><div class="d-text">Lobby &amp; Advocacy<small>Policy &amp; community rights</small></div></a>
+            <a href="projects/research-publication.html"><div class="d-text">Research &amp; Publication<small>Evidence-based change</small></div></a>
+          </div>
+          <div class="dropdown-divider"></div>
+          <div class="dropdown-grid">
+            <a href="projects/kindergarten.html"><div class="d-text">Kindergarten<small>Free early education</small></div></a>
+            <a href="projects/tailoring.html"><div class="d-text">Tailoring &amp; Dressmaking<small>Vocational skills</small></div></a>
+            <a href="projects/clinic.html"><div class="d-text">Community Clinic<small>Free care for under-18s</small></div></a>
+            <a href="projects/wkpi.html"><div class="d-text">Western Kenya Peace Initiative<small>Peacebuilding coalition</small></div></a>
+          </div>
+        </div>
+      </li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="volunteer.html">Volunteer</a></li>
+      <li class="nav-btn"><a href="donate.html" class="active">Donate</a></li>
+      <li class="nav-btn-solid"><a href="contact.html" >Contact Us</a></li>
+    </ul>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="nav-overlay" id="nav-overlay"></div>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="breadcrumb"><a href="index.html">Home</a> <span>›</span> <span>Donate &amp; Support</span></div>
+    <h1>Support Our Work</h1>
+    <p>Your generosity directly funds our programmes in Kisumu. Choose a project, pick an amount, and help us change a child's life today.</p>
+  </div>
+
+  <!-- DONATE FORM -->
+  <section style="background:var(--cream); padding:60px 6%;">
+    <div style="max-width:680px; margin:0 auto;">
+
+      <!-- Step 1: Frequency -->
+      <div class="donate-step">
+        <div class="donate-step-head"><span class="step-num-badge">1</span><h3>How often would you like to give?</h3></div>
+        <div class="freq-tabs">
+          <div class="freq-tab active" onclick="setFreq(this,'Once')">Give Once</div>
+          <div class="freq-tab" onclick="setFreq(this,'Monthly')">Give Monthly</div>
+          <div class="freq-tab" onclick="setFreq(this,'Annually')">Give Annually</div>
+        </div>
+      </div>
+
+      <!-- Step 2: Project -->
+      <div class="donate-step">
+        <div class="donate-step-head"><span class="step-num-badge">2</span><h3>Which project would you like to support?</h3></div>
+        <select id="project-select" onchange="updateProject()" class="donate-select">
+          <option value="Where Most Needed">Where Most Needed — Let UCDP decide</option>
+          <optgroup label="Mobile Youth Work & Child Advocacy">
+            <option value="Sanitary Pads Distribution">Sanitary Pads Distribution</option>
+            <option value="Relief Food Distribution">Relief Food Distribution</option>
+            <option value="School Sponsorship">Senior School Sponsorship</option>
+            <option value="Street Work & Reintegration">Street Work & Reintegration</option>
+            <option value="Safe House for Street Girls">Safe House for Street Girls</option>
+            <option value="Lobby & Advocacy">Lobby & Advocacy</option>
+            <option value="Research & Publication">Research & Publication</option>
+          </optgroup>
+          <optgroup label="Other Programmes">
+            <option value="Kindergarten Programme">Kindergarten Programme</option>
+            <option value="Tailoring & Dressmaking">Tailoring & Dressmaking</option>
+            <option value="Community Clinic">Community Clinic</option>
+            <option value="WKPI Peace Initiative">Western Kenya Peace Initiative (WKPI)</option>
+          </optgroup>
+        </select>
+        <div id="impact-hint" class="impact-hint">
+          <strong>Your donation will</strong> go where the need is greatest — UCDP will allocate your gift thoughtfully.
+        </div>
+      </div>
+
+      <!-- Step 3: Amount -->
+      <div class="donate-step">
+        <div class="donate-step-head"><span class="step-num-badge">3</span><h3>Choose an amount</h3></div>
+        <div class="amount-pills">
+          <button class="amt-pill" onclick="setAmt(this,500)">KES 500</button>
+          <button class="amt-pill active" onclick="setAmt(this,1000)">KES 1,000</button>
+          <button class="amt-pill" onclick="setAmt(this,2500)">KES 2,500</button>
+          <button class="amt-pill" onclick="setAmt(this,5000)">KES 5,000</button>
+          <button class="amt-pill" onclick="setAmt(this,10000)">KES 10,000</button>
+        </div>
+        <div style="display:flex; align-items:center; gap:10px; margin-top:12px;">
+          <span style="font-size:0.82rem; color:var(--muted); font-weight:700; white-space:nowrap;">Custom amount (KES)</span>
+          <input type="number" id="custom-amt" placeholder="e.g. 3000" min="1"
+            style="flex:1; padding:11px 14px; border:1.5px solid rgba(201,160,106,0.35); border-radius:10px; font-size:0.92rem; font-family:inherit; background:var(--white); color:var(--dark); outline:none;"
+            oninput="setCustomAmt(this.value)"/>
+        </div>
+      </div>
+
+      <!-- Step 4: Payment method -->
+      <div class="donate-step">
+        <div class="donate-step-head"><span class="step-num-badge">4</span><h3>How would you like to pay?</h3></div>
+        <div class="payment-tabs">
+          <button class="pay-tab active" onclick="setPayment(this,'mpesa')">
+            <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/M-PESA_LOGO-01.svg/120px-M-PESA_LOGO-01.svg.png" alt="M-Pesa" style="height:22px; vertical-align:middle;"/>
+            M-Pesa
+          </button>
+          <button class="pay-tab" onclick="setPayment(this,'card')">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+            Card / Bank
+          </button>
+          <button class="pay-tab" onclick="setPayment(this,'paypal')">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106zm14.146-14.42a3.35 3.35 0 0 0-.607-.541c-.013.076-.026.175-.041.254-.59 3.025-2.566 4.643-5.813 4.643h-2.19c-.232 0-.428.169-.463.398l-1.12 7.107-.314 1.98a.37.37 0 0 0 .366.428h3.95c.458 0 .845-.334.917-.787l.038-.196.73-4.63.047-.253c.072-.453.46-.787.917-.787h.578c3.736 0 6.658-1.517 7.512-5.905.357-1.83.172-3.358-.507-4.43z"/></svg>
+            PayPal
+          </button>
+        </div>
+
+        <!-- M-PESA PANEL -->
+        <div id="pay-mpesa" class="pay-panel active">
+
+          <!-- Sub-tabs: STK Push vs Paybill -->
+          <div style="display:flex; gap:8px; margin-bottom:22px;">
+            <button class="mpesa-sub active" id="sub-stk" onclick="setMpesaSub(this,'stk')">STK Push</button>
+            <button class="mpesa-sub" id="sub-paybill" onclick="setMpesaSub(this,'paybill')">Paybill</button>
+          </div>
+
+          <!-- STK Push -->
+          <div id="mpesa-stk">
+            <p style="font-size:0.88rem; color:var(--muted); margin-bottom:18px; line-height:1.7;">Enter your Safaricom number. You will receive a payment prompt directly on your phone — enter your M-Pesa PIN to complete the donation.</p>
+            <div class="form-group">
+              <label>Your Safaricom Number</label>
+              <div style="display:flex; gap:10px; align-items:center;">
+                <span style="padding:11px 14px; background:var(--cream); border:1.5px solid rgba(201,160,106,0.35); border-radius:10px; font-weight:700; font-size:0.9rem; color:var(--brown);">+254</span>
+                <input type="tel" id="mpesa-phone" placeholder="7XX XXX XXX" maxlength="9"
+                  style="flex:1; padding:11px 14px; border:1.5px solid rgba(201,160,106,0.35); border-radius:10px; font-size:0.95rem; font-family:inherit; background:var(--white); color:var(--dark); outline:none;"/>
+              </div>
+            </div>
+            <div class="donate-summary-row total-row" style="margin-bottom:16px;"><span>Amount</span><span id="mpesa-total">KES 1,000</span></div>
+            <button class="donate-btn" onclick="initiateMpesa()"><span id="mpesa-btn-text">Send STK Push →</span></button>
+            <p style="font-size:0.75rem; color:var(--muted); text-align:center; margin-top:12px;">Requires a Safaricom Daraja API key. <a href="https://developer.safaricom.co.ke" target="_blank" style="color:var(--gold);">Set up here →</a></p>
+          </div>
+
+          <!-- Paybill -->
+          <div id="mpesa-paybill" style="display:none;">
+            <p style="font-size:0.88rem; color:var(--muted); margin-bottom:18px; line-height:1.7;">Open M-Pesa on your phone, select <strong>Lipa na M-Pesa → Pay Bill</strong>, and use the details below.</p>
+            <div class="donate-summary-row"><span>Business No. (Paybill)</span><span style="font-weight:800; color:var(--brown); font-size:1rem;">YOUR PAYBILL NO.</span></div>
+            <div class="donate-summary-row"><span>Account No.</span><span style="font-weight:800; color:var(--brown); font-size:1rem;">UCDP</span></div>
+            <div class="donate-summary-row total-row"><span>Amount</span><span id="mpesa-paybill-total">KES 1,000</span></div>
+            <div style="background:rgba(212,168,70,0.1); border-left:4px solid var(--gold); border-radius:10px; padding:14px 18px; margin-top:18px; font-size:0.86rem; color:var(--brown); line-height:1.7;">
+              After paying, please <a href="contact.html" style="color:var(--gold); font-weight:700;">send us a message</a> with your name and M-Pesa confirmation code so we can acknowledge your donation.
+            </div>
+          </div>
+
+        </div>
+
+        <!-- CARD / BANK -->
+        <div id="pay-card" class="pay-panel">
+          <p style="font-size:0.88rem; color:var(--muted); margin-bottom:20px; line-height:1.7;">Pay securely by Visa, Mastercard, or bank transfer via Pesapal — trusted across East Africa and internationally.</p>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+            <div class="form-group"><label>First Name</label><input type="text" placeholder="Jane" class="donate-input"/></div>
+            <div class="form-group"><label>Last Name</label><input type="text" placeholder="Doe" class="donate-input"/></div>
+          </div>
+          <div class="form-group"><label>Email Address</label><input type="email" placeholder="jane@email.com" class="donate-input"/></div>
+          <div class="donate-summary-row total-row" style="margin-bottom:16px;"><span>Amount</span><span id="card-total">KES 1,000</span></div>
+          <button class="donate-btn" onclick="initiateCard()">Pay by Card / Bank →</button>
+          <p style="font-size:0.75rem; color:var(--muted); text-align:center; margin-top:12px;">
+            ⚠️ Requires a <a href="https://pesapal.com" target="_blank" style="color:var(--gold);">Pesapal</a> or <a href="https://stripe.com" target="_blank" style="color:var(--gold);">Stripe</a> account. Add your API keys to go live.
+          </p>
+        </div>
+
+        <!-- PAYPAL -->
+        <div id="pay-paypal" class="pay-panel">
+          <p style="font-size:0.88rem; color:var(--muted); margin-bottom:20px; line-height:1.7;">Donate securely via PayPal — ideal for international supporters. You will be redirected to PayPal to complete your donation.</p>
+          <div class="donate-summary-row total-row" style="margin-bottom:16px;"><span>Amount</span><span id="paypal-total">KES 1,000</span></div>
+          <button class="donate-btn" onclick="initiatePaypal()">Donate via PayPal →</button>
+          <p style="font-size:0.75rem; color:var(--muted); text-align:center; margin-top:12px;">
+            ⚠️ Replace <code style="background:rgba(201,160,106,0.15); padding:1px 6px; border-radius:4px;">YOUR_PAYPAL_ID</code> in the code with your PayPal.me link or Business ID.
+          </p>
+        </div>
+
+      </div>
+      <!-- End Step 4 -->
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+<!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="logo.png" alt="UCDP Logo"/>
+        <div class="org-name">Uhuru Community Development Project</div>
+        <p>Supporting vulnerable children and communities in Kisumu, Kenya since 2002.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="projects.html">Our Projects</a></li>
+          <li><a href="donate.html">Donate</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Our Projects</h4>
+        <ul>
+          <li><a href="projects/mobile-youth-advocacy.html">Mobile Youth Work &amp; Child Advocacy</a></li>
+          <li><a href="projects/kindergarten.html">Kindergarten Programme</a></li>
+          <li><a href="projects/tailoring.html">Tailoring &amp; Dressmaking</a></li>
+          <li><a href="projects/clinic.html">Community Clinic</a></li>
+          <li><a href="projects/wkpi.html">Western Kenya Peace Initiative</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Uhuru Community Development Project (UCDP). All rights reserved.</span>
+      <span><a href="data-protection.html" style="color:var(--gold);">Data Protection</a> &nbsp;·&nbsp; <a href="newsletter.html" style="color:var(--gold);">Newsletter</a> &nbsp;·&nbsp; Partners: <a href="http://uhuru-ev.de" target="_blank">Uhuru e.V.</a> &nbsp;·&nbsp; <a href="https://www.brot-fuer-die-welt.de/en/bread-for-the-world/" target="_blank">Bread for the World</a></span>
+    </div>
+  </footer>
+
+  <script>
+    // ── STATE ──
+    let currentFreq = 'Once';
+    let currentAmt  = 1000;
+    let currentProj = 'Where Most Needed';
+
+    const impactHints = {
+      'Where Most Needed':          'go where the need is greatest — UCDP will allocate your gift thoughtfully across our programmes.',
+      'Sanitary Pads Distribution': 'supply sanitary pads to girls in Kisumu, keeping them in school every day.',
+      'Relief Food Distribution':   'help feed a vulnerable family in Manyatta for one week.',
+      'School Sponsorship':         'contribute towards school fees for a sponsored senior school student.',
+      'Street Work & Reintegration':'support our outreach workers reaching street children in Kisumu.',
+      'Safe House for Street Girls':'contribute towards food, shelter, and care at our Safe House.',
+      'Lobby & Advocacy':           'support our team to engage decision-makers and prepare policy briefs.',
+      'Research & Publication':     'fund community research that shapes better programmes and advocacy.',
+      'Kindergarten Programme':     'cover meals and learning materials for a child at our kindergarten for a week.',
+      'Tailoring & Dressmaking':    'help fund sewing materials and training for a woman in our tailoring course.',
+      'Community Clinic':           'cover a clinic consultation and basic treatment for a community member.',
+      'WKPI Peace Initiative':      'contribute to peace dialogues and conflict resolution across western Kenya.'
+    };
+
+    function setFreq(el, freq) {
+      document.querySelectorAll('.freq-tab').forEach(t => t.classList.remove('active'));
+      el.classList.add('active');
+      currentFreq = freq;
+    }
+
+    function setAmt(el, amt) {
+      document.querySelectorAll('.amt-pill').forEach(b => b.classList.remove('active'));
+      el.classList.add('active');
+      document.getElementById('custom-amt').value = '';
+      currentAmt = amt;
+      updateTotals();
+    }
+
+    function setCustomAmt(val) {
+      document.querySelectorAll('.amt-pill').forEach(b => b.classList.remove('active'));
+      currentAmt = parseInt(val) || 0;
+      updateTotals();
+    }
+
+    function updateProject() {
+      currentProj = document.getElementById('project-select').value;
+      const hint = impactHints[currentProj] || '';
+      document.getElementById('impact-hint').innerHTML =
+        '<strong>Your donation will</strong> ' + hint;
+    }
+
+    function setMpesaSub(el, sub) {
+      document.querySelectorAll('.mpesa-sub').forEach(b => b.classList.remove('active'));
+      el.classList.add('active');
+      document.getElementById('mpesa-stk').style.display     = sub === 'stk'     ? 'block' : 'none';
+      document.getElementById('mpesa-paybill').style.display = sub === 'paybill' ? 'block' : 'none';
+    }
+
+    function updateTotals() {
+      const fmt = 'KES ' + currentAmt.toLocaleString();
+      ['mpesa-total','mpesa-paybill-total','card-total','paypal-total'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = fmt;
+      });
+    }
+
+    function setPayment(el, method) {
+      document.querySelectorAll('.pay-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.pay-panel').forEach(p => p.classList.remove('active'));
+      el.classList.add('active');
+      document.getElementById('pay-' + method).classList.add('active');
+    }
+
+    function initiateMpesa() {
+      const phone = document.getElementById('mpesa-phone').value.trim();
+      if (!phone || phone.length < 9) { alert('Please enter a valid Safaricom number.'); return; }
+      const btn = document.getElementById('mpesa-btn-text');
+      btn.textContent = 'Sending prompt…';
+      // ── TO GO LIVE: replace this with a fetch() call to your Daraja STK Push endpoint ──
+      // fetch('/api/mpesa-stk', { method:'POST', body: JSON.stringify({ phone:'+254'+phone, amount:currentAmt, project:currentProj }) })
+      setTimeout(() => {
+        alert('M-Pesa STK push sent to +254' + phone + '.\n\nCheck your phone and enter your PIN to complete the donation.\n\n(This is a demo — connect your Safaricom Daraja API to go live.)');
+        btn.textContent = 'Send STK Push →';
+      }, 1500);
+    }
+
+    function initiateCard() {
+      // ── TO GO LIVE: integrate Pesapal or Stripe here ──
+      alert('Card/Bank payment selected.\n\nKES ' + currentAmt.toLocaleString() + ' to UCDP.\n\n(Connect your Pesapal or Stripe account to go live.)');
+    }
+
+    function initiatePaypal() {
+      // ── TO GO LIVE: replace YOUR_PAYPAL_ID with your PayPal.me username or hosted button ID ──
+      const url = 'https://www.paypal.com/donate/?hosted_button_id=YOUR_PAYPAL_ID';
+      window.open(url, '_blank');
+    }
+
+    // Init
+    updateTotals();
+  </script>
+
+
+
+  <script>
+  // Mobile nav
+  const hamburger = document.getElementById('nav-hamburger');
+  const navLinks  = document.querySelector('.nav-links');
+  const overlay   = document.getElementById('nav-overlay');
+  function openNav()  { hamburger.classList.add('open'); navLinks.classList.add('open'); overlay.classList.add('open'); document.body.style.overflow='hidden'; }
+  function closeNav() { hamburger.classList.remove('open'); navLinks.classList.remove('open'); overlay.classList.remove('open'); document.body.style.overflow=''; }
+  hamburger?.addEventListener('click', () => navLinks.classList.contains('open') ? closeNav() : openNav());
+  overlay?.addEventListener('click', closeNav);
+  // Close on link click
+  navLinks?.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
+  // Expand dropdowns on mobile tap
+  document.querySelectorAll('.nav-links > li > a').forEach(a => {
+    a.addEventListener('click', function(e) {
+      if (window.innerWidth > 900) return;
+      const dd = this.parentElement.querySelector('.dropdown');
+      if (!dd) return;
+      e.preventDefault();
+      dd.classList.toggle('mobile-open');
+    });
+  });
+  </script>
+
+  <!-- COOKIE NOTICE -->
+  <div id="cookie-bar" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:9999;
+    background:rgba(26,15,7,0.96); backdrop-filter:blur(8px);
+    padding:14px 6%; align-items:center; justify-content:space-between;
+    gap:20px; flex-wrap:wrap; border-top:2px solid var(--gold); box-shadow:0 -4px 24px rgba(0,0,0,0.3);">
+    <p style="color:rgba(255,255,255,0.85); font-size:0.82rem; line-height:1.6; margin:0; max-width:680px;">
+      This site uses essential cookies only — no tracking, no advertising. 
+      We also use <strong style="color:var(--gold);">Google Analytics</strong> with anonymised IPs to understand how visitors use our site. 
+      No personal data is stored. <a href="data-protection.html" style="color:var(--gold); font-weight:700;">Learn more →</a>
+    </p>
+    <button onclick="dismissCookie()" style="
+      padding:9px 22px; background:var(--gold); border:none; border-radius:40px;
+      font-weight:800; font-size:0.82rem; color:var(--dark); cursor:pointer;
+      white-space:nowrap; flex-shrink:0; font-family:inherit;">
+      Got it
+    </button>
+  </div>
+
+  <!-- GOOGLE ANALYTICS (GA4 — anonymised IPs) -->
+  <!-- ⚠️  Replace G-XXXXXXXXXX with your real Measurement ID from analytics.google.com -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', {
+      anonymize_ip: true,          // Anonymise visitor IPs — GDPR compliant
+      cookie_flags: 'SameSite=None;Secure',
+    });
+
+    // ── Cookie notice logic ──
+    function dismissCookie() {
+      document.getElementById('cookie-bar').style.display = 'none';
+      localStorage.setItem('ucdp_cookie_ok', '1');
+    }
+    // Show bar only if not already dismissed
+    if (!localStorage.getItem('ucdp_cookie_ok')) {
+      var cb = document.getElementById('cookie-bar'); cb.style.display = 'flex'; cb.style.alignItems = 'center';
+    }
+  </script>
+</body>
+</html>

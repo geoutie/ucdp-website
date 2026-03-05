@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="icon" type="image/png" href="logo.png"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>News – UCDP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    .article-hero {
+      background: linear-gradient(135deg, var(--dark) 0%, var(--brown) 100%);
+      padding: 120px 6% 60px;
+      color: white;
+    }
+    .article-hero .breadcrumb { color: rgba(255,255,255,0.5); font-size: 0.8rem; margin-bottom: 20px; }
+    .article-hero .breadcrumb a { color: var(--gold); text-decoration: none; }
+    .article-hero .article-tag { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; display: block; }
+    .article-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 3.5vw, 2.6rem); font-weight: 900; line-height: 1.2; max-width: 760px; }
+    .article-cover { width: 100%; max-height: 420px; object-fit: cover; display: block; }
+    .article-body { max-width: 760px; margin: 0 auto; padding: 60px 6% 80px; }
+    .article-body h2 { font-family: 'Playfair Display', serif; color: var(--brown); font-size: 1.4rem; margin: 40px 0 16px; }
+    .article-body h3 { font-family: 'Playfair Display', serif; color: var(--brown); font-size: 1.15rem; margin: 28px 0 12px; }
+    .article-body p { color: var(--muted); line-height: 1.85; font-size: 0.97rem; margin-bottom: 18px; }
+    .article-body ul, .article-body ol { color: var(--muted); line-height: 1.85; font-size: 0.97rem; margin-bottom: 18px; padding-left: 24px; }
+    .article-body li { margin-bottom: 8px; }
+    .article-body strong { color: var(--dark); }
+    .article-body blockquote { border-left: 3px solid var(--gold); padding: 14px 20px; margin: 24px 0; background: rgba(212,168,70,0.07); border-radius: 0 10px 10px 0; }
+    .article-body blockquote p { margin: 0; font-style: italic; color: var(--brown); }
+    .back-link { display: inline-flex; align-items: center; gap: 8px; color: var(--gold); font-weight: 700; text-decoration: none; font-size: 0.88rem; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 40px; }
+    .back-link:hover { opacity: 0.75; }
+    .error-state { text-align: center; padding: 80px 6%; color: var(--muted); }
+    .error-state h2 { font-family: 'Playfair Display', serif; color: var(--brown); margin-bottom: 16px; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <img src="logo.png" alt="UCDP Logo"/>
+      <div><div class="org-name">Uhuru Community Development Project</div><div class="org-sub">Kisumu, Kenya</div></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="projects.html">Our Projects</a></li>
+      <li><a href="news.html" class="active">News</a></li>
+      <li><a href="volunteer.html">Volunteer</a></li>
+      <li class="nav-btn"><a href="donate.html">Donate</a></li>
+      <li class="nav-btn-solid"><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="nav-overlay" id="nav-overlay"></div>
+
+  <div id="article-container">
+    <div class="article-hero">
+      <div class="breadcrumb"><a href="index.html">Home</a> › <a href="news.html">News</a> › <span id="bc-title">Loading…</span></div>
+      <span class="article-tag" id="art-tag">Loading</span>
+      <h1 id="art-title">Loading article…</h1>
+    </div>
+    <div id="art-cover-wrap"></div>
+    <div class="article-body">
+      <div id="art-content"><p style="color:var(--muted)">Loading…</p></div>
+      <a href="news.html" class="back-link">← Back to All News</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="logo.png" alt="UCDP Logo"/>
+        <div class="org-name">Uhuru Community Development Project</div>
+        <p>Supporting vulnerable children and communities in Kisumu, Kenya since 2002.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="projects.html">Our Projects</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="volunteer.html">Volunteer</a></li>
+          <li><a href="donate.html">Donate</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Uhuru Community Development Project (UCDP). All rights reserved.</span>
+      <span><a href="data-protection.html" style="color:var(--gold);">Data Protection</a></span>
+    </div>
+  </footer>
+
+  <script src="gallery.js"></script>
+  <script>
+    // Get slug from URL: ?article=slug-name
+    const params = new URLSearchParams(window.location.search);
+    const slug = params.get('article');
+
+    if (!slug) {
+      document.getElementById('art-title').textContent = 'Article not found';
+      document.getElementById('art-content').innerHTML = '<p>No article specified. <a href="news.html" style="color:var(--gold)">Return to News →</a></p>';
+    } else {
+      fetch('_data/news/' + slug + '.json')
+        .then(r => { if (!r.ok) throw new Error('Not found'); return r.json(); })
+        .then(data => {
+          // Update page title
+          document.title = data.title + ' – UCDP';
+          // Hero
+          document.getElementById('bc-title').textContent = data.title;
+          document.getElementById('art-tag').textContent = data.category + ' · ' + data.date;
+          document.getElementById('art-title').textContent = data.title;
+          // Cover image
+          if (data.image) {
+            document.getElementById('art-cover-wrap').innerHTML =
+              '<img src="' + data.image + '" alt="' + data.title + '" class="article-cover"/>';
+          }
+          // Content (Markdown → HTML)
+          document.getElementById('art-content').innerHTML = marked.parse(data.content || '');
+        })
+        .catch(() => {
+          document.getElementById('art-title').textContent = 'Article not found';
+          document.getElementById('art-content').innerHTML =
+            '<p>This article could not be loaded. <a href="news.html" style="color:var(--gold)">Return to News →</a></p>';
+        });
+    }
+
+    // Mobile nav
+    const hamburger = document.getElementById('nav-hamburger');
+    const navLinks  = document.querySelector('.nav-links');
+    const overlay   = document.getElementById('nav-overlay');
+    function openNav()  { hamburger.classList.add('open'); navLinks.classList.add('open'); overlay.classList.add('open'); document.body.style.overflow='hidden'; }
+    function closeNav() { hamburger.classList.remove('open'); navLinks.classList.remove('open'); overlay.classList.remove('open'); document.body.style.overflow=''; }
+    hamburger?.addEventListener('click', () => navLinks.classList.contains('open') ? closeNav() : openNav());
+    overlay?.addEventListener('click', closeNav);
+    navLinks?.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
+  </script>
+
+  <!-- COOKIE NOTICE -->
+  <div id="cookie-bar" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:9999;
+    background:rgba(26,15,7,0.96); backdrop-filter:blur(8px);
+    padding:14px 6%; align-items:center; justify-content:space-between;
+    gap:20px; flex-wrap:wrap; border-top:2px solid var(--gold); box-shadow:0 -4px 24px rgba(0,0,0,0.3);">
+    <p style="color:rgba(255,255,255,0.85); font-size:0.82rem; line-height:1.6; margin:0; max-width:680px;">
+      This site uses essential cookies only. We also use <strong style="color:var(--gold);">Google Analytics</strong> with anonymised IPs.
+      <a href="data-protection.html" style="color:var(--gold); font-weight:700;">Learn more →</a>
+    </p>
+    <button onclick="dismissCookie()" style="padding:9px 22px; background:var(--gold); border:none; border-radius:40px; font-weight:800; font-size:0.82rem; color:var(--dark); cursor:pointer; white-space:nowrap; font-family:inherit;">Got it</button>
+  </div>
+  <script>
+    function dismissCookie() { document.getElementById('cookie-bar').style.display='none'; localStorage.setItem('ucdp_cookie_ok','1'); }
+    if (!localStorage.getItem('ucdp_cookie_ok')) { var cb=document.getElementById('cookie-bar'); cb.style.display='flex'; cb.style.alignItems='center'; }
+  </script>
+</body>
+</html>

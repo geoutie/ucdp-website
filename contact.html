@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="icon" type="image/png" href="logo.png"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us – UCDP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+    .contact-item { display: flex; align-items: flex-start; gap: 18px; margin-bottom: 28px; }
+    .contact-icon { width: 46px; height: 46px; border-radius: 10px; flex-shrink: 0; background: linear-gradient(135deg, var(--brown), var(--tan)); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; }
+    .contact-item h4 { font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 700; color: var(--brown); margin-bottom: 3px; }
+    .contact-item p { font-size: 0.9rem; color: var(--muted); }
+    .contact-item a { color: var(--muted); text-decoration: none; }
+    .contact-item a:hover { color: var(--gold); }
+    .involve-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 52px; }
+    .involve-card { background: var(--white); border-radius: 16px; padding: 28px 24px; text-align: center; box-shadow: 0 4px 20px rgba(107,63,31,0.07); border-top: 4px solid var(--gold); }
+    .involve-card .icon { font-size: 2.2rem; display: block; margin-bottom: 14px; }
+    .involve-card h3 { font-family: 'Playfair Display', serif; font-weight: 700; color: var(--brown); margin-bottom: 10px; }
+    .involve-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.65; }
+    @media (max-width: 900px) { .contact-grid, .involve-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+        <nav>
+    <a href="index.html" class="nav-logo">
+      <img src="logo.png" alt="UCDP Logo"/>
+      <div><div class="org-name">Uhuru Community Development Project</div><div class="org-sub">Kisumu, Kenya</div></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" >Home</a></li>
+      <li>
+        <a href="about.html" >About Us <span class="chevron">▼</span></a>
+        <div class="dropdown">
+          <span class="dropdown-label">About UCDP</span>
+          <a href="about.html#story"><div class="d-text">Our Story<small>How UCDP began in 2002</small></div></a>
+          <a href="about.html#timeline"><div class="d-text">Our Journey<small>Milestones over the years</small></div></a>
+          <a href="about.html#values"><div class="d-text">Our Values<small>What guides everything we do</small></div></a>
+          <a href="about.html#team"><div class="d-text">Our Team<small>The people behind UCDP</small></div></a>
+        </div>
+      </li>
+      <li>
+        <a href="projects.html">Our Projects <span class="chevron">▼</span></a>
+        <div class="dropdown wide">
+          <span class="dropdown-label">Our 5 Projects</span>
+          <div class="dropdown-grid">
+            <a href="projects/mobile-youth-advocacy.html" style="grid-column:1/-1; background:rgba(212,168,70,0.08); border-radius:8px; margin-bottom:2px;">
+              <div class="d-text"><strong>Mobile Youth Work &amp; Child Advocacy</strong><small>Our flagship outreach project</small></div>
+            </a>
+          </div>
+          <div style="padding:4px 12px 4px; font-size:0.65rem; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted);">Activities under this project</div>
+          <div class="dropdown-grid">
+            <a href="projects/sanitary-pads.html"><div class="d-text">Sanitary Pads<small>Girls under 18, all sub-counties</small></div></a>
+            <a href="projects/relief-food.html"><div class="d-text">Relief Food<small>Children 5 &amp; below</small></div></a>
+            <a href="projects/school-sponsorship.html"><div class="d-text">School Sponsorship<small>Fee support for needy students</small></div></a>
+            <a href="projects/street-work.html"><div class="d-text">Street Work<small>Outreach &amp; reintegration</small></div></a>
+            <a href="projects/safe-house.html"><div class="d-text">Safe House<small>Shelter for street girls</small></div></a>
+            <a href="projects/lobby-advocacy.html"><div class="d-text">Lobby &amp; Advocacy<small>Policy &amp; community rights</small></div></a>
+            <a href="projects/research-publication.html"><div class="d-text">Research &amp; Publication<small>Evidence-based change</small></div></a>
+          </div>
+          <div class="dropdown-divider"></div>
+          <div class="dropdown-grid">
+            <a href="projects/kindergarten.html"><div class="d-text">Kindergarten<small>Free early education</small></div></a>
+            <a href="projects/tailoring.html"><div class="d-text">Tailoring &amp; Dressmaking<small>Vocational skills</small></div></a>
+            <a href="projects/clinic.html"><div class="d-text">Community Clinic<small>Free care for under-18s</small></div></a>
+            <a href="projects/wkpi.html"><div class="d-text">Western Kenya Peace Initiative<small>Peacebuilding coalition</small></div></a>
+          </div>
+        </div>
+      </li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="volunteer.html">Volunteer</a></li>
+      <li class="nav-btn"><a href="donate.html" >Donate</a></li>
+      <li class="nav-btn-solid"><a href="contact.html" class="active">Contact Us</a></li>
+    </ul>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="nav-overlay" id="nav-overlay"></div>
+
+  <div class="page-hero">
+    <div class="breadcrumb"><a href="index.html">Home</a> <span>›</span> <span>Contact Us</span></div>
+    <h1>Get In Touch</h1>
+    <p>Whether you want to partner, volunteer, donate, or learn more — we'd love to hear from you.</p>
+  </div>
+
+  <section>
+    <div class="contact-grid">
+      <div class="reveal">
+        <span class="section-tag">Contact Information</span>
+        <h2 class="section-title">Reach Us Directly</h2>
+        <p class="section-lead" style="margin-bottom:36px;">We are based in Manyatta, Kisumu, and welcome visitors, partners, and supporters from near and far.</p>
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div><h4>Our Location</h4><p>P.O. Box 19568<br/>Manyatta, Kisumu, Kenya</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div><h4>Phone</h4><p><a href="tel:+254714000000">+254 714 000 000</a></p></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">✉️</div>
+          <div><h4>Email</h4><p><a href="mailto:info@ucdp.org">info@ucdp.org</a></p></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🕐</div>
+          <div><h4>Office Hours</h4><p>Monday – Friday: 8:00 AM – 5:00 PM</p></div>
+        </div>
+
+
+      <!-- MAP -->
+      <div class="map-wrap reveal" style="margin-top: 40px;">
+        <h4 style="font-family:'Playfair Display',serif; font-weight:700; color:var(--brown); margin-bottom:14px; font-size:0.95rem;">📍 Find Us in Kisumu</h4>
+        <div style="border-radius:14px; overflow:hidden; border:2px solid rgba(201,160,106,0.25); box-shadow:0 4px 20px rgba(107,63,31,0.1);">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.819!2d34.7617!3d-0.0917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182aa6e5d6c1b14d%3A0x9e3a5b8e7f2d4c1a!2sManyatta%2C%20Kisumu%2C%20Kenya!5e0!3m2!1sen!2ske!4v1700000000000!5m2!1sen!2ske"
+            width="100%" height="320" style="border:0; display:block;"
+            allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        <p style="font-size:0.78rem; color:var(--muted); margin-top:8px; text-align:center;">Manyatta, Kisumu, Kenya — <a href="https://maps.google.com/?q=Manyatta,Kisumu,Kenya" target="_blank" style="color:var(--gold);">Open in Google Maps →</a></p>
+      </div>
+
+      </div>
+      <form id="contact-form" class="contact-form reveal" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <h3>Send Us a Message</h3>
+        <div class="form-row">
+          <div class="form-group"><label>First Name</label><input type="text" name="first_name" placeholder="Your first name"/></div>
+          <div class="form-group"><label>Last Name</label><input type="text" name="last_name" placeholder="Your last name"/></div>
+        </div>
+        <div class="form-group"><label>Email Address</label><input type="email" placeholder="your@email.com" name="email"/></div>
+        <div class="form-group"><label>Phone (optional)</label><input type="tel" name="phone" placeholder="e.g. 0714 000 000"/></div>
+        <div class="form-group">
+          <label>I would like to...</label>
+          <select name="subject">
+            <option>General Inquiry</option>
+            <option>Partner / Collaborate</option>
+            <option>Volunteer</option>
+            <option>Donate</option>
+            <option>Enquire about the projects</option>
+            <option>Media / Press</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Message</label><textarea name="message" placeholder="Tell us how you'd like to get involved or ask us anything..."></textarea></div>
+        <button type="submit" class="form-submit">Send Message →</button>
+      </form>
+    </div>
+  </section>
+
+
+
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="logo.png" alt="UCDP Logo"/>
+        <div class="org-name">Uhuru Community Development Project</div>
+        <p>Supporting vulnerable children and communities in Kisumu, Kenya since 2002.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="projects.html">Our Projects</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+          <li><a href="volunteer.html">Volunteer</a></li>
+          <li><a href="donate.html">Donate</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Our Projects</h4>
+        <ul>
+          <li><a href="projects/mobile-youth-advocacy.html">Mobile Youth Work &amp; Child Advocacy</a></li>
+          <li><a href="projects/kindergarten.html">Kindergarten Programme</a></li>
+          <li><a href="projects/tailoring.html">Tailoring &amp; Dressmaking</a></li>
+          <li><a href="projects/clinic.html">Community Clinic</a></li>
+          <li><a href="projects/wkpi.html">Western Kenya Peace Initiative</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Uhuru Community Development Project (UCDP). All rights reserved.</span>
+      <span><a href="data-protection.html" style="color:var(--gold);">Data Protection</a> &nbsp;·&nbsp; <a href="newsletter.html" style="color:var(--gold);">Newsletter</a> &nbsp;·&nbsp; Partners: <a href="http://uhuru-ev.de" target="_blank">Uhuru e.V.</a> &nbsp;·&nbsp; <a href="https://www.brot-fuer-die-welt.de/en/bread-for-the-world/" target="_blank">Bread for the World</a></span>
+    </div>
+  </footer>
+
+  <script src="gallery.js"></script>
+
+  <script>
+  // Mobile nav
+  const hamburger = document.getElementById('nav-hamburger');
+  const navLinks  = document.querySelector('.nav-links');
+  const overlay   = document.getElementById('nav-overlay');
+  function openNav()  { hamburger.classList.add('open'); navLinks.classList.add('open'); overlay.classList.add('open'); document.body.style.overflow='hidden'; }
+  function closeNav() { hamburger.classList.remove('open'); navLinks.classList.remove('open'); overlay.classList.remove('open'); document.body.style.overflow=''; }
+  hamburger?.addEventListener('click', () => navLinks.classList.contains('open') ? closeNav() : openNav());
+  overlay?.addEventListener('click', closeNav);
+  // Close on link click
+  navLinks?.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
+  // Expand dropdowns on mobile tap
+  document.querySelectorAll('.nav-links > li > a').forEach(a => {
+    a.addEventListener('click', function(e) {
+      if (window.innerWidth > 900) return;
+      const dd = this.parentElement.querySelector('.dropdown');
+      if (!dd) return;
+      e.preventDefault();
+      dd.classList.toggle('mobile-open');
+    });
+  });
+  </script>
+
+  <script>
+  // Form submission handler
+  async function submitForm(formId, successMsg) {
+    const form = document.getElementById(formId);
+    if (!form) return;
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn = form.querySelector('button[type="submit"], .submit-btn');
+      const orig = btn ? btn.textContent : '';
+      if (btn) { btn.textContent = 'Sending...'; btn.style.opacity = '0.7'; btn.disabled = true; }
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST', body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          form.innerHTML = `<div style="text-align:center;padding:48px 24px;">
+            <div style="font-size:3rem;margin-bottom:16px;">✅</div>
+            <h3 style="font-family:'Playfair Display',serif;color:var(--brown);margin-bottom:10px;">${successMsg}</h3>
+            <p style="color:var(--muted);font-size:0.92rem;">We will get back to you as soon as possible.</p>
+          </div>`;
+        } else {
+          throw new Error('Form error');
+        }
+      } catch(err) {
+        if (btn) { btn.textContent = orig; btn.style.opacity = '1'; btn.disabled = false; }
+        alert('Sorry, something went wrong. Please email us directly at info@ucdp.org');
+      }
+    });
+  }
+  submitForm('contact-form', 'Message Sent — Thank You!');
+  submitForm('volunteer-form', 'Application Received — Thank You!');
+  </script>
+
+  <!-- COOKIE NOTICE -->
+  <div id="cookie-bar" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:9999;
+    background:rgba(26,15,7,0.96); backdrop-filter:blur(8px);
+    padding:14px 6%; align-items:center; justify-content:space-between;
+    gap:20px; flex-wrap:wrap; border-top:2px solid var(--gold); box-shadow:0 -4px 24px rgba(0,0,0,0.3);">
+    <p style="color:rgba(255,255,255,0.85); font-size:0.82rem; line-height:1.6; margin:0; max-width:680px;">
+      This site uses essential cookies only — no tracking, no advertising. 
+      We also use <strong style="color:var(--gold);">Google Analytics</strong> with anonymised IPs to understand how visitors use our site. 
+      No personal data is stored. <a href="data-protection.html" style="color:var(--gold); font-weight:700;">Learn more →</a>
+    </p>
+    <button onclick="dismissCookie()" style="
+      padding:9px 22px; background:var(--gold); border:none; border-radius:40px;
+      font-weight:800; font-size:0.82rem; color:var(--dark); cursor:pointer;
+      white-space:nowrap; flex-shrink:0; font-family:inherit;">
+      Got it
+    </button>
+  </div>
+
+  <!-- GOOGLE ANALYTICS (GA4 — anonymised IPs) -->
+  <!-- ⚠️  Replace G-XXXXXXXXXX with your real Measurement ID from analytics.google.com -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', {
+      anonymize_ip: true,          // Anonymise visitor IPs — GDPR compliant
+      cookie_flags: 'SameSite=None;Secure',
+    });
+
+    // ── Cookie notice logic ──
+    function dismissCookie() {
+      document.getElementById('cookie-bar').style.display = 'none';
+      localStorage.setItem('ucdp_cookie_ok', '1');
+    }
+    // Show bar only if not already dismissed
+    if (!localStorage.getItem('ucdp_cookie_ok')) {
+      var cb = document.getElementById('cookie-bar'); cb.style.display = 'flex'; cb.style.alignItems = 'center';
+    }
+  </script>
+</body>
+</html>

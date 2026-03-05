@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="icon" type="image/png" href="logo.png"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>News & Updates – UCDP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    /* ── NEWS GRID ── */
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px; margin-top: 48px;
+    }
+    .news-card {
+      background: var(--white); border-radius: 16px; overflow: hidden;
+      box-shadow: 0 4px 20px rgba(107,63,31,0.08);
+      border: 1px solid rgba(201,160,106,0.15);
+      text-decoration: none; color: inherit; display: block;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .news-card:hover { transform: translateY(-5px); box-shadow: 0 12px 36px rgba(107,63,31,0.14); }
+    .news-card-img {
+      height: 200px; overflow: hidden; background: var(--cream);
+      position: relative;
+    }
+    .news-card-img img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+      transition: transform 0.4s;
+    }
+    .news-card:hover .news-card-img img { transform: scale(1.05); }
+    .news-card-img .news-placeholder {
+      width: 100%; height: 100%;
+      background: linear-gradient(135deg, var(--brown), var(--tan));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 3rem;
+    }
+    .news-card-body { padding: 22px 20px 24px; }
+    .news-meta {
+      display: flex; align-items: center; gap: 10px;
+      margin-bottom: 10px;
+    }
+    .news-tag {
+      font-size: 0.68rem; font-weight: 800; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--white);
+      background: var(--brown); border-radius: 20px; padding: 3px 10px;
+    }
+    .news-date {
+      font-size: 0.78rem; color: var(--muted);
+    }
+    .news-card h3 {
+      font-family: 'Playfair Display', serif; font-weight: 700;
+      font-size: 1.05rem; color: var(--brown); margin-bottom: 10px;
+      line-height: 1.35;
+    }
+    .news-card p {
+      font-size: 0.87rem; color: var(--muted); line-height: 1.65;
+      margin-bottom: 14px;
+    }
+    .news-read-more {
+      font-size: 0.8rem; font-weight: 800; color: var(--gold);
+      text-transform: uppercase; letter-spacing: 0.08em;
+    }
+
+    /* Featured/lead story */
+    .news-featured {
+      grid-column: 1 / -1;
+      display: grid; grid-template-columns: 1.4fr 1fr;
+      gap: 0; border-radius: 16px; overflow: hidden;
+    }
+    .news-featured .news-card-img { height: 100%; min-height: 280px; }
+    .news-featured .news-card-body {
+      padding: 36px 32px; display: flex; flex-direction: column; justify-content: center;
+    }
+    .news-featured h3 { font-size: 1.5rem; margin-bottom: 14px; }
+    .news-featured p { font-size: 0.93rem; }
+
+    /* ── ARCHIVE ── */
+    .archive-section { background: var(--white); }
+    .year-group { margin-bottom: 40px; }
+    .year-label {
+      font-family: 'Playfair Display', serif; font-size: 1.4rem;
+      font-weight: 900; color: var(--brown); margin-bottom: 20px;
+      padding-bottom: 12px; border-bottom: 2px solid rgba(212,168,70,0.3);
+      display: flex; align-items: center; gap: 12px;
+    }
+    .year-label span {
+      font-size: 0.7rem; font-weight: 800; color: var(--muted);
+      letter-spacing: 0.1em; text-transform: uppercase;
+      background: var(--cream); border-radius: 20px; padding: 3px 10px;
+    }
+    .archive-list { display: flex; flex-direction: column; gap: 16px; }
+    .archive-item {
+      display: flex; gap: 20px; align-items: flex-start;
+      padding: 18px 20px; border-radius: 12px; background: var(--cream);
+      text-decoration: none; color: inherit;
+      border: 1px solid rgba(201,160,106,0.15);
+      transition: background 0.2s, transform 0.2s;
+    }
+    .archive-item:hover { background: rgba(212,168,70,0.08); transform: translateX(4px); }
+    .archive-item-icon {
+      width: 44px; height: 44px; border-radius: 10px; flex-shrink: 0;
+      background: linear-gradient(135deg, var(--brown), var(--tan));
+      display: flex; align-items: center; justify-content: center; font-size: 1.1rem;
+    }
+    .archive-item h4 {
+      font-family: 'Playfair Display', serif; font-weight: 700;
+      font-size: 0.97rem; color: var(--brown); margin-bottom: 4px;
+    }
+    .archive-item p { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
+    .archive-item .arch-date {
+      font-size: 0.73rem; color: var(--muted); margin-top: 4px; display: block;
+    }
+
+    @media (max-width: 900px) {
+      .news-grid { grid-template-columns: 1fr 1fr; }
+      .news-featured { grid-template-columns: 1fr; }
+      .news-featured .news-card-img { min-height: 220px; }
+    }
+    @media (max-width: 600px) {
+      .news-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <img src="logo.png" alt="UCDP Logo"/>
+      <div><div class="org-name">Uhuru Community Development Project</div><div class="org-sub">Kisumu, Kenya</div></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li>
+        <a href="about.html">About Us <span class="chevron">▼</span></a>
+        <div class="dropdown">
+          <span class="dropdown-label">About UCDP</span>
+          <a href="about.html#story"><div class="d-text">Our Story<small>How UCDP began in 2002</small></div></a>
+          <a href="about.html#timeline"><div class="d-text">Our Journey<small>Milestones over the years</small></div></a>
+          <a href="about.html#values"><div class="d-text">Our Values<small>What guides everything we do</small></div></a>
+          <a href="about.html#team"><div class="d-text">Our Team<small>The people behind UCDP</small></div></a>
+        </div>
+      </li>
+      <li>
+        <a href="projects.html">Our Projects <span class="chevron">▼</span></a>
+        <div class="dropdown wide">
+          <span class="dropdown-label">Our 5 Projects</span>
+          <div class="dropdown-grid">
+            <a href="projects/mobile-youth-advocacy.html" style="grid-column:1/-1; background:rgba(212,168,70,0.08); border-radius:8px; margin-bottom:2px;">
+              <div class="d-text"><strong>Mobile Youth Work &amp; Child Advocacy</strong><small>Our flagship outreach project</small></div>
+            </a>
+          </div>
+          <div style="padding:4px 12px 4px; font-size:0.65rem; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted);">Activities under this project</div>
+          <div class="dropdown-grid">
+            <a href="projects/sanitary-pads.html"><div class="d-text">Sanitary Pads<small>Girls under 18, all sub-counties</small></div></a>
+            <a href="projects/relief-food.html"><div class="d-text">Relief Food<small>Children 5 &amp; below</small></div></a>
+            <a href="projects/school-sponsorship.html"><div class="d-text">School Sponsorship<small>Fee support for needy students</small></div></a>
+            <a href="projects/street-work.html"><div class="d-text">Street Work<small>Outreach &amp; reintegration</small></div></a>
+            <a href="projects/safe-house.html"><div class="d-text">Safe House<small>Shelter for street girls</small></div></a>
+            <a href="projects/lobby-advocacy.html"><div class="d-text">Lobby &amp; Advocacy<small>Policy &amp; community rights</small></div></a>
+            <a href="projects/research-publication.html"><div class="d-text">Research &amp; Publication<small>Evidence-based change</small></div></a>
+          </div>
+          <div class="dropdown-divider"></div>
+          <div class="dropdown-grid">
+            <a href="projects/kindergarten.html"><div class="d-text">Kindergarten<small>Free early education</small></div></a>
+            <a href="projects/tailoring.html"><div class="d-text">Tailoring &amp; Dressmaking<small>Vocational skills</small></div></a>
+            <a href="projects/clinic.html"><div class="d-text">Community Clinic<small>Free care for under-18s</small></div></a>
+            <a href="projects/wkpi.html"><div class="d-text">Western Kenya Peace Initiative<small>Peacebuilding coalition</small></div></a>
+          </div>
+        </div>
+      </li>
+      <li><a href="news.html" class="active">News</a></li>
+      <li><a href="volunteer.html">Volunteer</a></li>
+      <li class="nav-btn"><a href="donate.html">Donate</a></li>
+      <li class="nav-btn-solid"><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="nav-overlay" id="nav-overlay"></div>
+
+  <div class="page-hero">
+    <div class="breadcrumb"><a href="index.html">Home</a> <span>›</span> <span>News &amp; Updates</span></div>
+    <h1>News &amp; Updates</h1>
+    <p>Stories from the field, programme updates, and highlights from our work across Kisumu County.</p>
+  </div>
+
+
+  <!-- DYNAMIC NEWS — loaded from _data/news/ -->
+  <section id="news-latest">
+    <div class="reveal" style="text-align:center;">
+      <span class="section-tag">Latest</span>
+      <h2 class="section-title">Recent Stories</h2>
+    </div>
+    <div class="news-grid reveal" id="news-grid">
+      <div style="grid-column:1/-1; text-align:center; padding:40px; color:var(--muted);">Loading news…</div>
+    </div>
+  </section>
+
+  <section class="archive-section" id="news-archive" style="display:none;">
+    <div class="reveal" style="text-align:center; margin-bottom:48px;">
+      <span class="section-tag">Archive</span>
+      <h2 class="section-title">All Stories</h2>
+    </div>
+    <div class="reveal archive-list" id="archive-list"></div>
+  </section>
+
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="logo.png" alt="UCDP Logo"/>
+        <div class="org-name">Uhuru Community Development Project</div>
+        <p>Supporting vulnerable children and communities in Kisumu, Kenya since 2002.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="projects.html">Our Projects</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="donate.html">Donate</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Our Projects</h4>
+        <ul>
+          <li><a href="projects/mobile-youth-advocacy.html">Mobile Youth Work &amp; Child Advocacy</a></li>
+          <li><a href="projects/kindergarten.html">Kindergarten Programme</a></li>
+          <li><a href="projects/tailoring.html">Tailoring &amp; Dressmaking</a></li>
+          <li><a href="projects/clinic.html">Community Clinic</a></li>
+          <li><a href="projects/wkpi.html">Western Kenya Peace Initiative</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Uhuru Community Development Project (UCDP). All rights reserved.</span>
+      <span><a href="data-protection.html" style="color:var(--gold);">Data Protection</a> &nbsp;·&nbsp; <a href="newsletter.html" style="color:var(--gold);">Newsletter</a> &nbsp;·&nbsp; Partners: <a href="http://uhuru-ev.de" target="_blank">Uhuru e.V.</a> &nbsp;·&nbsp; <a href="https://www.brot-fuer-die-welt.de/en/bread-for-the-world/" target="_blank">Bread for the World</a></span>
+    </div>
+  </footer>
+  <script src="gallery.js"></script>
+
+  <script>
+  // ── DYNAMIC NEWS LOADER ──
+  const CATEGORY_EMOJI = {
+    'Sanitary Pads':'🩸','Kindergarten':'🧒','WKPI':'🕊️','Tailoring':'🧵',
+    'Clinic':'🏥','Safe House':'🏠','School Sponsorship':'🎓',
+    'Street Work':'🤲','Relief Food':'🍱','General':'📰','Programme Update':'📋'
+  };
+
+  async function loadNews() {
+    try {
+      const indexRes = await fetch('_data/news-index.json');
+      const slugs = await indexRes.json();
+      const articles = await Promise.all(slugs.map(slug =>
+        fetch('_data/news/' + slug + '.json').then(r => r.json()).then(d => ({...d, slug})).catch(() => null)
+      ));
+      const valid = articles.filter(Boolean);
+      renderNews(valid);
+    } catch(e) {
+      document.getElementById('news-grid').innerHTML = '<div style="grid-column:1/-1;text-align:center;color:var(--muted);padding:40px;">News could not be loaded. Please try again later.</div>';
+    }
+  }
+
+  function renderNews(articles) {
+    const grid = document.getElementById('news-grid');
+    const archive = document.getElementById('archive-list');
+    const archSection = document.getElementById('news-archive');
+
+    if (!articles.length) {
+      grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;color:var(--muted);padding:40px;">No news articles yet.</div>';
+      return;
+    }
+
+    // First 3 as cards, rest as archive list
+    const featured = articles.slice(0, 3);
+    const older = articles.slice(3);
+
+    grid.innerHTML = featured.map((a, i) => {
+      const emoji = CATEGORY_EMOJI[a.category] || '📰';
+      const imgHtml = a.image
+        ? `<img loading="lazy" src="${a.image}" alt="${a.title}" onerror="this.parentElement.innerHTML='<div class=\\'news-placeholder\\'>${emoji}</div>'"/>`
+        : `<div class="news-placeholder">${emoji}</div>`;
+      const featClass = i === 0 ? 'news-featured' : '';
+      return `
+        <a href="article.html?article=${a.slug}" class="news-card ${featClass}">
+          <div class="news-card-img">${imgHtml}</div>
+          <div class="news-card-body">
+            <div class="news-meta">
+              <span class="news-tag">${a.category}</span>
+              <span class="news-date">${a.date}</span>
+            </div>
+            <h3>${a.title}</h3>
+            <p>${a.summary}</p>
+            <span class="news-read-more">Read Full Story →</span>
+          </div>
+        </a>`;
+    }).join('');
+
+    if (older.length) {
+      archSection.style.display = '';
+      archive.innerHTML = older.map(a => {
+        const emoji = CATEGORY_EMOJI[a.category] || '📰';
+        return `
+          <a href="article.html?article=${a.slug}" class="archive-item">
+            <div class="archive-item-icon">${emoji}</div>
+            <div>
+              <h4>${a.title}</h4>
+              <p>${a.summary}</p>
+              <span class="arch-date">${a.date}</span>
+            </div>
+          </a>`;
+      }).join('');
+    }
+  }
+
+  loadNews();
+
+  // Mobile nav
+  const hamburger = document.getElementById('nav-hamburger');
+  const navLinks  = document.querySelector('.nav-links');
+  const overlay   = document.getElementById('nav-overlay');
+  function openNav()  { hamburger.classList.add('open'); navLinks.classList.add('open'); overlay.classList.add('open'); document.body.style.overflow='hidden'; }
+  function closeNav() { hamburger.classList.remove('open'); navLinks.classList.remove('open'); overlay.classList.remove('open'); document.body.style.overflow=''; }
+  hamburger?.addEventListener('click', () => navLinks.classList.contains('open') ? closeNav() : openNav());
+  overlay?.addEventListener('click', closeNav);
+  // Close on link click
+  navLinks?.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
+  // Expand dropdowns on mobile tap
+  document.querySelectorAll('.nav-links > li > a').forEach(a => {
+    a.addEventListener('click', function(e) {
+      if (window.innerWidth > 900) return;
+      const dd = this.parentElement.querySelector('.dropdown');
+      if (!dd) return;
+      e.preventDefault();
+      dd.classList.toggle('mobile-open');
+    });
+  });
+  </script>
+
+  <!-- COOKIE NOTICE -->
+  <div id="cookie-bar" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:9999;
+    background:rgba(26,15,7,0.96); backdrop-filter:blur(8px);
+    padding:14px 6%; align-items:center; justify-content:space-between;
+    gap:20px; flex-wrap:wrap; border-top:2px solid var(--gold); box-shadow:0 -4px 24px rgba(0,0,0,0.3);">
+    <p style="color:rgba(255,255,255,0.85); font-size:0.82rem; line-height:1.6; margin:0; max-width:680px;">
+      This site uses essential cookies only — no tracking, no advertising. 
+      We also use <strong style="color:var(--gold);">Google Analytics</strong> with anonymised IPs to understand how visitors use our site. 
+      No personal data is stored. <a href="data-protection.html" style="color:var(--gold); font-weight:700;">Learn more →</a>
+    </p>
+    <button onclick="dismissCookie()" style="
+      padding:9px 22px; background:var(--gold); border:none; border-radius:40px;
+      font-weight:800; font-size:0.82rem; color:var(--dark); cursor:pointer;
+      white-space:nowrap; flex-shrink:0; font-family:inherit;">
+      Got it
+    </button>
+  </div>
+
+  <!-- GOOGLE ANALYTICS (GA4 — anonymised IPs) -->
+  <!-- ⚠️  Replace G-XXXXXXXXXX with your real Measurement ID from analytics.google.com -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', {
+      anonymize_ip: true,          // Anonymise visitor IPs — GDPR compliant
+      cookie_flags: 'SameSite=None;Secure',
+    });
+
+    // ── Cookie notice logic ──
+    function dismissCookie() {
+      document.getElementById('cookie-bar').style.display = 'none';
+      localStorage.setItem('ucdp_cookie_ok', '1');
+    }
+    // Show bar only if not already dismissed
+    if (!localStorage.getItem('ucdp_cookie_ok')) {
+      var cb = document.getElementById('cookie-bar'); cb.style.display = 'flex'; cb.style.alignItems = 'center';
+    }
+  </script>
+</body>
+</html>

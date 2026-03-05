@@ -1,0 +1,38 @@
+# ── UCDP Netlify Configuration ──
+
+[build]
+  publish = "."
+
+# ── NETLIFY IDENTITY (powers the /admin login) ──
+# After deploying, go to: Netlify Dashboard → Site → Identity → Enable Identity
+# Then: Identity → Services → Enable Git Gateway
+# Then: Identity → Registration → Set to "Invite only"
+# Finally: Invite yourself as a user under Identity → Users
+
+# ── IMAGE CDN ──
+[images]
+  remote_images = ["https://images.unsplash.com/*", "https://upload.wikimedia.org/*", "http://uhuru-ev.de/*", "https://www.brot-fuer-die-welt.de/*"]
+
+
+# ── CACHE HEADERS ──
+# Images cached for 1 year — huge speed boost on repeat visits
+[[headers]]
+  for = "/photos/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# HTML — always revalidated so updates show immediately
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
