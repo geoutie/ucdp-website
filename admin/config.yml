@@ -37,29 +37,18 @@ collections:
         name: "homepage"
         file: "_data/homepage.json"
         fields:
-          - label: "Hero Headline"
-            name: "hero_headline"
-            widget: "string"
-            hint: "Main headline on the homepage hero banner"
-          - label: "Hero Subheadline"
-            name: "hero_subheadline"
-            widget: "string"
+          - { label: "Hero Headline", name: "hero_headline", widget: "string" }
+          - { label: "Hero Subheadline", name: "hero_subheadline", widget: "string" }
           - label: "Stats Banner"
             name: "stats"
             widget: "list"
             max: 4
             fields:
-              - { label: "Number or Word", name: "num", widget: "string", hint: "e.g. 2002, 5, Kisumu" }
-              - { label: "Label", name: "label", widget: "string", hint: "e.g. Year Founded" }
-          - label: "About Section — Main Paragraph"
-            name: "about_p1"
-            widget: "text"
-          - label: "About Section — Second Paragraph"
-            name: "about_p2"
-            widget: "text"
-          - label: "Vision Quote"
-            name: "vision_quote"
-            widget: "string"
+              - { label: "Number or Word", name: "num", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+          - { label: "About Section — Main Paragraph", name: "about_p1", widget: "text" }
+          - { label: "About Section — Second Paragraph", name: "about_p2", widget: "text" }
+          - { label: "Vision Quote", name: "vision_quote", widget: "string" }
 
       - label: "Contact & Organisation Info"
         name: "contact"
@@ -77,23 +66,13 @@ collections:
         name: "social"
         file: "_data/social.json"
         fields:
-          - { label: "Facebook URL", name: "facebook", widget: "string", hint: "Full URL e.g. https://facebook.com/UCDPKisumu" }
+          - { label: "Facebook URL", name: "facebook", widget: "string" }
           - { label: "Instagram URL", name: "instagram", widget: "string" }
           - { label: "Twitter/X URL", name: "twitter", widget: "string" }
           - { label: "WhatsApp Number", name: "whatsapp", widget: "string", hint: "International format e.g. 254712345678" }
           - { label: "YouTube URL", name: "youtube", widget: "string", required: false }
 
-      - label: "News Article Order"
-        name: "news_index"
-        file: "_data/news-index.json"
-        description: "Controls the order news articles appear. The first slug at the top is the most recent. Add new article slugs here when you publish a new article."
-        fields:
-          - label: "Article Slugs (in order, newest first)"
-            name: "items"
-            widget: "list"
-            field: { label: "Slug", name: "slug", widget: "string", hint: "The filename of the article without .json — e.g. new-sanitary-pads-drive" }
-
-
+      - label: "Donate Page"
         name: "donate"
         file: "_data/donate.json"
         fields:
@@ -106,3 +85,12 @@ collections:
           - { label: "SWIFT / BIC Code", name: "swift", widget: "string", required: false }
           - { label: "M-Pesa Paybill / Till Number", name: "mpesa", widget: "string", required: false }
           - { label: "PayPal Email", name: "paypal", widget: "string", required: false }
+
+      - label: "News Article Order"
+        name: "news_index"
+        file: "_data/news-index.json"
+        fields:
+          - label: "Article Slugs (in order, newest first)"
+            name: "items"
+            widget: "list"
+            field: { label: "Slug", name: "slug", widget: "string", hint: "Filename without .json — e.g. new-sanitary-pads-drive" }
