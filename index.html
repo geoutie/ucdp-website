@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <link rel="icon" type="image/png" href="logo.png"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>UCDP – Uhuru Community Development Project | Kisumu, Kenya</title>
@@ -430,6 +431,18 @@
     // Show bar only if not already dismissed
     if (!localStorage.getItem('ucdp_cookie_ok')) {
       var cb = document.getElementById('cookie-bar'); cb.style.display = 'flex'; cb.style.alignItems = 'center';
+    }
+  </script>
+  <script>
+    // Netlify Identity — redirect to admin after login/password reset
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
     }
   </script>
 </body>
