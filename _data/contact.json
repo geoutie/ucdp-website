@@ -5,5 +5,29 @@
   "phone": "+254 700 000 000",
   "address": "Uhuru Estate, Kisumu, Kenya",
   "postal": "P.O. Box 0000, Kisumu",
-  "director": "Davies Okombo"
+  "director": "Davies Okombo",
+  "office_hours": "Monday \u2013 Friday: 8:00 AM \u2013 5:00 PM",
+  "maps_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.819!2d34.7617!3d-0.0917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182aa6e5d6c1b14d%3A0x9e3a5b8e7f2d4c1a!2sManyatta%2C%20Kisumu%2C%20Kenya!5e0!3m2!1sen!2ske!4v1700000000000!5m2!1sen!2ske",
+  "formspree_contact": "YOUR_FORM_ID",
+  "formspree_volunteer": "YOUR_FORM_ID_2",
+  "google_analytics_id": "G-XXXXXXXXXX",
+  "hero_title": "Get In Touch",
+  "hero_subtitle": "Whether you want to partner, volunteer, donate, or learn more \u2014 we'd love to hear from you.",
+  "involve_cards": [
+    {
+      "icon": "\u2764\ufe0f",
+      "title": "Donate",
+      "description": "Your financial support directly funds our programmes. Every contribution, big or small, makes a difference."
+    },
+    {
+      "icon": "\ud83d\ude4b",
+      "title": "Volunteer",
+      "description": "Bring your skills and energy to Kisumu. We welcome volunteers from all backgrounds and countries."
+    },
+    {
+      "icon": "\ud83e\udd1d",
+      "title": "Partner With Us",
+      "description": "Are you an organisation, school, or church? Let's collaborate to multiply our impact in the community."
+    }
+  ]
 }

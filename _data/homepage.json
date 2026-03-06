@@ -1,6 +1,6 @@
 {
   "hero_headline": "Empowering Children. Building Futures.",
-  "hero_subheadline": "Kisumu, Kenya",
+  "hero_subheadline": "Kisumu, Kenya \u00b7 Est. 2002",
   "stats": [
     {
       "num": "2002",
@@ -19,7 +19,26 @@
       "label": "Since 2002"
     }
   ],
-  "about_p1": "Uhuru Community Development Project (UCDP) was founded in 2002 by Davies Okombo — a professional social worker with a vision to protect, support, and empower the most vulnerable children and families in Kisumu, Western Kenya.",
-  "about_p2": "We work across Kisumu County — in the streets, schools, clinics, and communities — running programmes that address poverty, homelessness, lack of education, and social exclusion. Everything we do is rooted in respect for human dignity and a belief that every child deserves a future.",
-  "vision_quote": "Every child deserves safety, education, and the chance to grow into who they are meant to be."
+  "about_p1": "Uhuru Community Development Project (UCDP) was founded in 2002 by Davies Okombo \u2014 a professional social worker with a vision to protect, support, and empower the most vulnerable children and families in Kisumu, western Kenya.",
+  "about_p2": "We work across Kisumu County \u2014 in the streets, schools, clinics, and communities \u2014 running programmes that address poverty, homelessness, lack of education, and social exclusion. Everything we do is rooted in respect for human dignity and a belief that every child deserves a future.",
+  "vision_quote": "Every child deserves safety, education, and the chance to grow into who they are meant to be.",
+  "hero_photos": [
+    {
+      "photo": "photos/hero/hero-1.jpg"
+    },
+    {
+      "photo": "photos/hero/hero-2.jpg"
+    },
+    {
+      "photo": "photos/hero/hero-3.jpg"
+    },
+    {
+      "photo": "photos/hero/hero-4.jpg"
+    },
+    {
+      "photo": "photos/hero/hero-5.jpg"
+    }
+  ],
+  "about_photo": "photos/about-home.jpg",
+  "vision_bg": "photos/vision-bg.jpg"
 }

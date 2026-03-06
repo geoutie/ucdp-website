@@ -58,5 +58,69 @@
       "text": "Update this step description."
     }
   ],
-  "photo_folder": "photos/mobile-youth-advocacy"
+  "photo_folder": "photos/mobile-youth-advocacy",
+  "photos": [],
+  "sidebar_photo": "",
+  "project_stats": [
+    {
+      "num": "Multiple",
+      "label": "Integrated Activities"
+    },
+    {
+      "num": "Under 18",
+      "label": "Primary Target Group"
+    },
+    {
+      "num": "Kisumu",
+      "label": "County-Wide Reach"
+    },
+    {
+      "num": "2002",
+      "label": "Programme Since"
+    }
+  ],
+  "activity_cards": [
+    {
+      "icon": "\ud83e\ude78",
+      "title": "Sanitary Pads Distribution",
+      "description": "Distributing sanitary pads to girls under 18 across all sub-counties in Kisumu County \u2014 so no girl ever misses school because of her period.",
+      "link": "sanitary-pads.html"
+    },
+    {
+      "icon": "\ud83c\udf5a",
+      "title": "Relief Food Distribution",
+      "description": "Providing nutritional support to malnourished children aged 5 and below, identified through clinical assessment at our Community Clinic.",
+      "link": "relief-food.html"
+    },
+    {
+      "icon": "\ud83c\udf93",
+      "title": "Senior School Sponsorship",
+      "description": "Sponsoring school fees for needy students across Kisumu County throughout their full 4 years of senior school education.",
+      "link": "school-sponsorship.html"
+    },
+    {
+      "icon": "\ud83e\udd32",
+      "title": "Street Work & Reintegration",
+      "description": "Trained social workers and volunteers reach out to street children \u2014 building trust and guiding them towards safe, stable lives.",
+      "link": "street-work.html"
+    },
+    {
+      "icon": "\ud83c\udfe0",
+      "title": "Safe House for Street Girls",
+      "description": "A secure, nurturing refuge for girls from the streets \u2014 including mothers with their children, some of them second-generation street children.",
+      "link": "safe-house.html"
+    },
+    {
+      "icon": "\ud83d\udce2",
+      "title": "Lobby & Advocacy",
+      "description": "Championing the rights of children and vulnerable communities through policy engagement, awareness campaigns, and coalition building.",
+      "link": "lobby-advocacy.html"
+    },
+    {
+      "icon": "\ud83d\udcda",
+      "title": "Research & Publication",
+      "description": "Generating evidence, documenting impact, and publishing findings to drive informed, effective, and lasting community change.",
+      "link": "research-publication.html"
+    }
+  ]
 }

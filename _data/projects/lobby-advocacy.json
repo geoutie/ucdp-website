@@ -58,5 +58,26 @@
       "text": "We collaborate with other NGOs, civil society organisations, and government bodies to amplify our advocacy impact."
     }
   ],
-  "photo_folder": "photos/lobby-advocacy"
+  "photo_folder": "photos/lobby-advocacy",
+  "photos": [],
+  "sidebar_photo": "",
+  "videos_section": {
+    "featured_id": "VIDEO_ID_1",
+    "featured_title": "Add your latest video title here",
+    "grid": [
+      {
+        "id": "VIDEO_ID_2",
+        "title": "Add video title here"
+      },
+      {
+        "id": "VIDEO_ID_3",
+        "title": "Add video title here"
+      },
+      {
+        "id": "VIDEO_ID_4",
+        "title": "Add video title here"
+      }
+    ],
+    "channel_url": "https://www.youtube.com/@YOUR_CHANNEL"
+  }
 }

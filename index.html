@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <meta name="cms-data" content="_data/homepage.json"/>
   <link rel="icon" type="image/png" href="logo.png"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>UCDP – Uhuru Community Development Project | Kisumu, Kenya</title>
@@ -162,7 +163,7 @@
 
   <!-- HERO -->
   <section class="hero-carousel" id="home">
-    <div class="hero-slides">
+    <div class="hero-slides" id="cms-hero-slides">
       <div class="hero-slide"><img loading="lazy" src="photos/hero-1.jpg" alt="UCDP community work in Kisumu"/></div>
       <div class="hero-slide"><img loading="lazy" src="photos/hero-2.jpg" alt="UCDP team and community members"/></div>
       <div class="hero-slide"><img loading="lazy" src="photos/hero-3.jpg" alt="UCDP children and programmes"/></div>
@@ -181,7 +182,7 @@
     <!-- Text overlay — bottom left, sits above gradient -->
     <div class="hero-content">
       <p style="font-size:0.7rem; font-weight:800; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold); margin-bottom:10px; opacity:0.9;">Kisumu, Kenya &nbsp;·&nbsp; Est. 2002</p>
-      <h1 style="font-family:'Playfair Display',serif; font-size:clamp(1.6rem,3.5vw,2.6rem); font-weight:900; color:#fff; line-height:1.2; margin-bottom:20px;">Empowering Children.<br/>Building <em>Futures.</em></h1>
+      <h1 style="font-family:'Playfair Display',serif; font-size:clamp(1.6rem,3.5vw,2.6rem); font-weight:900; color:#fff; line-height:1.2; margin-bottom:20px;" data-cms="hero_headline">Empowering Children.<br/>Building <em>Futures.</em></h1>
       <a href="about.html" class="btn btn-primary">Who We Are</a>
     </div>
   </section>
@@ -210,13 +211,13 @@
   <section id="about">
     <div class="about-split reveal">
       <div class="about-img-wrap">
-        <img loading="lazy" src="photos/about-home.jpg" alt="UCDP Team" onerror="this.style.display='none'"/>
+        <img loading="lazy" src="photos/about-home.jpg" alt="UCDP Team" id="cms-about-photo" onerror="this.style.display='none'"/>
       </div>
       <div class="about-text">
         <span class="section-tag">Who We Are</span>
         <h2 class="section-title">A Community Built on Care</h2>
-        <p>Uhuru Community Development Project (UCDP) was founded in 2002 by Davies Okombo — a professional social worker with a vision to protect, support, and empower the most vulnerable children and families in Kisumu, western Kenya.</p>
-        <p>We work across Kisumu County — in the streets, schools, clinics, and communities — running programmes that address poverty, homelessness, lack of education, and social exclusion. Everything we do is rooted in respect for human dignity and a belief that every child deserves a future.</p>
+        <p data-cms="about_p1">Uhuru Community Development Project (UCDP) was founded in 2002 by Davies Okombo — a professional social worker with a vision to protect, support, and empower the most vulnerable children and families in Kisumu, western Kenya.</p>
+        <p data-cms="about_p2">We work across Kisumu County — in the streets, schools, clinics, and communities — running programmes that address poverty, homelessness, lack of education, and social exclusion. Everything we do is rooted in respect for human dignity and a belief that every child deserves a future.</p>
         <blockquote style="border-left:3px solid var(--gold); padding:14px 20px; margin:24px 0; background:rgba(212,168,70,0.07); border-radius:0 10px 10px 0;">
           <p style="font-family:'Playfair Display',serif; font-style:italic; color:var(--brown); font-size:1rem; line-height:1.65; margin:0;">"Uhuru" — meaning <em>freedom</em> in Swahili — reflects our core belief that every child deserves to live and grow in freedom and dignity, regardless of their circumstances.</p>
         </blockquote>
@@ -231,7 +232,7 @@
 
   <!-- VISION -->
   <div class="vision-banner reveal">
-    <blockquote>"Every child deserves safety, education, and the chance to grow into who they are meant to be."</blockquote>
+    <blockquote data-cms="vision_quote">"Every child deserves safety, education, and the chance to grow into who they are meant to be."</blockquote>
     <cite>— Davies Okombo, Founder &amp; Executive Director, UCDP</cite>
   </div>
 
@@ -369,6 +370,7 @@
     </div>
   </footer>
   <script src="gallery.js"></script>
+  <script src="cms-loader.js" defer></script>
 
   <script>
   // Mobile nav

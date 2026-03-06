@@ -83,8 +83,8 @@
 
   <div class="page-hero">
     <div class="breadcrumb"><a href="index.html">Home</a> <span>›</span> <span>Contact Us</span></div>
-    <h1>Get In Touch</h1>
-    <p>Whether you want to partner, volunteer, donate, or learn more — we'd love to hear from you.</p>
+    <h1 data-cms="hero_title">Get In Touch</h1>
+    <p data-cms="hero_subtitle">Whether you want to partner, volunteer, donate, or learn more — we'd love to hear from you.</p>
   </div>
 
   <section>
@@ -95,11 +95,11 @@
         <p class="section-lead" style="margin-bottom:36px;">We are based in Manyatta, Kisumu, and welcome visitors, partners, and supporters from near and far.</p>
         <div class="contact-item">
           <div class="contact-icon">📍</div>
-          <div><h4>Our Location</h4><p>P.O. Box 19568<br/>Manyatta, Kisumu, Kenya</p></div>
+          <div><h4>Our Location</h4><p id="cms-address">P.O. Box 19568<br/>Manyatta, Kisumu, Kenya</p></div>
         </div>
         <div class="contact-item">
           <div class="contact-icon">📞</div>
-          <div><h4>Phone</h4><p><a href="tel:+254714000000">+254 714 000 000</a></p></div>
+          <div><h4>Phone</h4><p><a href="#" id="cms-phone-link"><span id="cms-phone">+254 714 000 000</span></a></p></div>
         </div>
         <div class="contact-item">
           <div class="contact-icon">✉️</div>
@@ -107,7 +107,7 @@
         </div>
         <div class="contact-item">
           <div class="contact-icon">🕐</div>
-          <div><h4>Office Hours</h4><p>Monday – Friday: 8:00 AM – 5:00 PM</p></div>
+          <div><h4>Office Hours</h4><p id="cms-office-hours">Monday – Friday: 8:00 AM – 5:00 PM</p></div>
         </div>
 
 
@@ -115,8 +115,7 @@
       <div class="map-wrap reveal" style="margin-top: 40px;">
         <h4 style="font-family:'Playfair Display',serif; font-weight:700; color:var(--brown); margin-bottom:14px; font-size:0.95rem;">📍 Find Us in Kisumu</h4>
         <div style="border-radius:14px; overflow:hidden; border:2px solid rgba(201,160,106,0.25); box-shadow:0 4px 20px rgba(107,63,31,0.1);">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.819!2d34.7617!3d-0.0917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182aa6e5d6c1b14d%3A0x9e3a5b8e7f2d4c1a!2sManyatta%2C%20Kisumu%2C%20Kenya!5e0!3m2!1sen!2ske!4v1700000000000!5m2!1sen!2ske"
+          <iframe id="cms-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.819!2d34.7617!3d-0.0917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182aa6e5d6c1b14d%3A0x9e3a5b8e7f2d4c1a!2sManyatta%2C%20Kisumu%2C%20Kenya!5e0!3m2!1sen!2ske!4v1700000000000!5m2!1sen!2ske"
             width="100%" height="320" style="border:0; display:block;"
             allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade">

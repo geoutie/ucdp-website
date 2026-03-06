@@ -271,11 +271,11 @@
     <div class="reveal" style="margin-bottom:52px;">
       <div style="display:flex; align-items:center; gap:10px; margin-bottom:18px;">
         <span style="background:var(--gold); color:var(--dark); font-size:0.65rem; font-weight:900; letter-spacing:0.12em; text-transform:uppercase; padding:4px 12px; border-radius:40px;">Most Recent</span>
-        <span style="font-size:0.8rem; color:var(--muted); font-weight:700;" id="recent-video-title">Add your latest video title here</span>
+        <span style="font-size:0.8rem; color:var(--muted); font-weight:700;" id="cms-featured-title">Add your latest video title here</span>
       </div>
       <!-- Replace VIDEO_ID_1 with the YouTube video ID from your URL e.g. youtube.com/watch?v=VIDEO_ID_1 -->
       <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:16px; box-shadow:0 8px 32px rgba(43,26,15,0.15);">
-        <iframe id="featured-video"
+        <iframe id="cms-featured-video"
           src="https://www.youtube.com/embed/VIDEO_ID_1"
           title="UCDP Lobby &amp; Advocacy — Latest Video"
           style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"
@@ -288,7 +288,7 @@
     <!-- MORE VIDEOS — 3 column grid -->
     <div class="reveal" style="margin-bottom:16px;">
       <h3 style="font-family:'Playfair Display',serif; font-weight:700; color:var(--brown); font-size:1.05rem; margin-bottom:24px;">More Videos</h3>
-      <div class="video-grid">
+      <div class="video-grid" id="cms-video-grid">
 
         <!-- Video card — copy this block to add more videos -->
         <!-- Replace VIDEO_ID_2, VIDEO_ID_3, VIDEO_ID_4 with real YouTube IDs -->
@@ -335,7 +335,7 @@
 
     <div class="reveal" style="text-align:center; margin-top:36px;">
       <!-- Replace YOUR_CHANNEL_ID with your YouTube channel URL -->
-      <a href="https://www.youtube.com/@YOUR_CHANNEL_ID" target="_blank" rel="noopener"
+      <a href="https://www.youtube.com/@YOUR_CHANNEL_ID" id="cms-yt-channel" target="_blank" rel="noopener"
         class="btn btn-brown">View All Videos on YouTube →</a>
     </div>
   </section>

@@ -2,14 +2,14 @@ backend:
   name: git-gateway
   branch: main
 
-# ── MEDIA — upload photos to any folder ──
 media_folder: "photos"
 public_folder: "/photos"
 
-# ── COLLECTIONS ──
 collections:
 
-  # ── NEWS ARTICLES ──
+  # ════════════════════════════════════════
+  # 📰 NEWS ARTICLES
+  # ════════════════════════════════════════
   - name: "news"
     label: "📰 News Articles"
     label_singular: "News Article"
@@ -23,31 +23,34 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "date", format: "MMMM YYYY" }
-      - { label: "Category", name: "category", widget: "select", options: ["Programme Update", "Kindergarten", "WKPI", "Tailoring", "Clinic", "Safe House", "School Sponsorship", "Sanitary Pads", "Relief Food", "Street Work", "General"] }
+      - { label: "Category", name: "category", widget: "select", options: ["Programme Update","Kindergarten","WKPI","Tailoring","Clinic","Safe House","School Sponsorship","Sanitary Pads","Relief Food","Street Work","Lobby & Advocacy","Research","General"] }
       - { label: "Short Summary", name: "summary", widget: "text", hint: "1-2 sentences shown on the news listing page" }
       - { label: "Cover Image", name: "image", widget: "image", required: false }
       - { label: "Article Content", name: "content", widget: "markdown" }
 
-  # ── PROJECT PAGES ──
+  # ════════════════════════════════════════
+  # 🏗️ PROJECT PAGES
+  # ════════════════════════════════════════
   - name: "projects"
     label: "🏗️ Project Pages"
     label_singular: "Project"
     files:
-      - label: "Mobile Youth Work & Child Advocacy"
-        name: "mobile-youth-advocacy"
-        file: "_data/projects/mobile-youth-advocacy.json"
+
+      - label: "Safe House for Street Girls"
+        name: "safe-house"
+        file: "_data/projects/safe-house.json"
         fields: &project_fields
           - { label: "Page Title", name: "title", widget: "string" }
           - { label: "Page Tagline", name: "tagline", widget: "text" }
           - { label: "Main Paragraph 1", name: "intro_p1", widget: "text" }
           - { label: "Main Paragraph 2", name: "intro_p2", widget: "text", required: false }
           - { label: "Main Paragraph 3", name: "intro_p3", widget: "text", required: false }
-          - label: "Impact Cards (4 numbers/stats)"
+          - label: "Impact Cards (4 stats)"
             name: "impact_cards"
             widget: "list"
             max: 4
             fields:
-              - { label: "Number / Word", name: "num", widget: "string", hint: "e.g. 2,400 or 100% Free" }
+              - { label: "Number / Word", name: "num", widget: "string", hint: "e.g. 2,400 or Safe" }
               - { label: "Label", name: "label", widget: "string" }
           - label: "Quick Facts (sidebar)"
             name: "quick_facts"
@@ -63,11 +66,12 @@ collections:
             fields:
               - { label: "Step Title", name: "title", widget: "string" }
               - { label: "Step Description", name: "text", widget: "text" }
-
-      - label: "Safe House for Street Girls"
-        name: "safe-house"
-        file: "_data/projects/safe-house.json"
-        fields: *project_fields
+          - { label: "Sidebar Photo", name: "sidebar_photo", widget: "image", required: false }
+          - label: "Photo Gallery (up to 8 photos)"
+            name: "photos"
+            widget: "list"
+            max: 8
+            field: { label: "Photo", name: "photo", widget: "image" }
 
       - label: "Sanitary Pads Programme"
         name: "sanitary-pads"
@@ -84,19 +88,9 @@ collections:
         file: "_data/projects/school-sponsorship.json"
         fields: *project_fields
 
-      - label: "Street Work"
+      - label: "Street Work & Reintegration"
         name: "street-work"
         file: "_data/projects/street-work.json"
-        fields: *project_fields
-
-      - label: "Lobby & Advocacy"
-        name: "lobby-advocacy"
-        file: "_data/projects/lobby-advocacy.json"
-        fields: *project_fields
-
-      - label: "Research & Publication"
-        name: "research-publication"
-        file: "_data/projects/research-publication.json"
         fields: *project_fields
 
       - label: "Kindergarten Programme"
@@ -119,7 +113,145 @@ collections:
         file: "_data/projects/wkpi.json"
         fields: *project_fields
 
-  # ── ABOUT PAGE ──
+      - label: "Mobile Youth Work & Child Advocacy"
+        name: "mobile-youth-advocacy"
+        file: "_data/projects/mobile-youth-advocacy.json"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string" }
+          - { label: "Page Tagline", name: "tagline", widget: "text" }
+          - { label: "Main Paragraph 1", name: "intro_p1", widget: "text" }
+          - { label: "Main Paragraph 2", name: "intro_p2", widget: "text", required: false }
+          - { label: "Main Paragraph 3", name: "intro_p3", widget: "text", required: false }
+          - label: "Project Stats (4 figures)"
+            name: "project_stats"
+            widget: "list"
+            max: 4
+            fields:
+              - { label: "Number / Word", name: "num", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+          - label: "Activity Cards"
+            name: "activity_cards"
+            widget: "list"
+            hint: "The cards listing each activity under this project"
+            fields:
+              - { label: "Emoji Icon", name: "icon", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Link (filename only)", name: "link", widget: "string", hint: "e.g. sanitary-pads.html" }
+          - label: "Quick Facts (sidebar)"
+            name: "quick_facts"
+            widget: "list"
+            max: 4
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Value", name: "value", widget: "string" }
+          - { label: "Sidebar Photo", name: "sidebar_photo", widget: "image", required: false }
+          - label: "Photo Gallery (up to 8 photos)"
+            name: "photos"
+            widget: "list"
+            max: 8
+            field: { label: "Photo", name: "photo", widget: "image" }
+
+      - label: "Lobby & Advocacy"
+        name: "lobby-advocacy"
+        file: "_data/projects/lobby-advocacy.json"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string" }
+          - { label: "Page Tagline", name: "tagline", widget: "text" }
+          - { label: "Main Paragraph 1", name: "intro_p1", widget: "text" }
+          - { label: "Main Paragraph 2", name: "intro_p2", widget: "text", required: false }
+          - { label: "Main Paragraph 3", name: "intro_p3", widget: "text", required: false }
+          - label: "Impact Cards (4 stats)"
+            name: "impact_cards"
+            widget: "list"
+            max: 4
+            fields:
+              - { label: "Number / Word", name: "num", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+          - label: "Quick Facts (sidebar)"
+            name: "quick_facts"
+            widget: "list"
+            max: 4
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Value", name: "value", widget: "string" }
+          - label: "How It Works Steps"
+            name: "steps"
+            widget: "list"
+            max: 5
+            fields:
+              - { label: "Step Title", name: "title", widget: "string" }
+              - { label: "Step Description", name: "text", widget: "text" }
+          - label: "YouTube Videos"
+            name: "videos_section"
+            widget: "object"
+            fields:
+              - { label: "Featured Video — YouTube ID", name: "featured_id", widget: "string", hint: "The part after ?v= in the YouTube URL e.g. dQw4w9WgXcQ" }
+              - { label: "Featured Video — Title", name: "featured_title", widget: "string" }
+              - label: "More Videos (grid)"
+                name: "grid"
+                widget: "list"
+                max: 6
+                fields:
+                  - { label: "YouTube Video ID", name: "id", widget: "string", hint: "The part after ?v= in the YouTube URL" }
+                  - { label: "Video Title", name: "title", widget: "string" }
+              - { label: "YouTube Channel URL", name: "channel_url", widget: "string", hint: "Full URL to your YouTube channel" }
+          - { label: "Sidebar Photo", name: "sidebar_photo", widget: "image", required: false }
+          - label: "Photo Gallery (up to 8 photos)"
+            name: "photos"
+            widget: "list"
+            max: 8
+            field: { label: "Photo", name: "photo", widget: "image" }
+
+      - label: "Research & Publication"
+        name: "research-publication"
+        file: "_data/projects/research-publication.json"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string" }
+          - { label: "Page Tagline", name: "tagline", widget: "text" }
+          - { label: "Main Paragraph 1", name: "intro_p1", widget: "text" }
+          - { label: "Main Paragraph 2", name: "intro_p2", widget: "text", required: false }
+          - { label: "Main Paragraph 3", name: "intro_p3", widget: "text", required: false }
+          - label: "Impact Cards (4 stats)"
+            name: "impact_cards"
+            widget: "list"
+            max: 4
+            fields:
+              - { label: "Number / Word", name: "num", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+          - label: "Quick Facts (sidebar)"
+            name: "quick_facts"
+            widget: "list"
+            max: 4
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Value", name: "value", widget: "string" }
+          - label: "How It Works Steps"
+            name: "steps"
+            widget: "list"
+            max: 5
+            fields:
+              - { label: "Step Title", name: "title", widget: "string" }
+              - { label: "Step Description", name: "text", widget: "text" }
+          - label: "Publications"
+            name: "publications"
+            widget: "list"
+            fields:
+              - { label: "Type (e.g. Report)", name: "type", widget: "string" }
+              - { label: "Year", name: "year", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Link URL", name: "url", widget: "string" }
+          - { label: "Sidebar Photo", name: "sidebar_photo", widget: "image", required: false }
+          - label: "Photo Gallery (up to 8 photos)"
+            name: "photos"
+            widget: "list"
+            max: 8
+            field: { label: "Photo", name: "photo", widget: "image" }
+
+  # ════════════════════════════════════════
+  # 👥 ABOUT PAGE
+  # ════════════════════════════════════════
   - name: "about"
     label: "👥 About Page"
     files:
@@ -133,6 +265,7 @@ collections:
           - { label: "Our Story — Lead Paragraph", name: "story_lead", widget: "text" }
           - { label: "Our Story — Paragraph 1", name: "story_p1", widget: "text" }
           - { label: "Our Story — Paragraph 2", name: "story_p2", widget: "text" }
+          - { label: "Our Story Photo", name: "story_photo", widget: "image", required: false }
           - label: "Timeline"
             name: "timeline"
             widget: "list"
@@ -147,8 +280,11 @@ collections:
               - { label: "Emoji Icon", name: "icon", widget: "string" }
               - { label: "Value Name", name: "title", widget: "string" }
               - { label: "Description", name: "text", widget: "text" }
+          - { label: "Team Group Photo", name: "team_photo", widget: "image", required: false }
 
-  # ── VOLUNTEER PAGE ──
+  # ════════════════════════════════════════
+  # 🙋 VOLUNTEER PAGE
+  # ════════════════════════════════════════
   - name: "volunteer"
     label: "🙋 Volunteer Page"
     files:
@@ -167,10 +303,18 @@ collections:
               - { label: "Emoji Icon", name: "icon", widget: "string" }
               - { label: "Role Title", name: "title", widget: "string" }
               - { label: "Description", name: "text", widget: "text" }
-          - { label: "How to Apply — Text", name: "apply_text", widget: "text" }
+          - { label: "How to Apply Text", name: "apply_text", widget: "text" }
           - { label: "Minimum Duration", name: "min_duration", widget: "string" }
+          - label: "FAQ Items"
+            name: "faqs"
+            widget: "list"
+            fields:
+              - { label: "Question", name: "question", widget: "string" }
+              - { label: "Answer", name: "answer", widget: "text" }
 
-  # ── SITE SETTINGS ──
+  # ════════════════════════════════════════
+  # ⚙️ SITE SETTINGS
+  # ════════════════════════════════════════
   - name: "settings"
     label: "⚙️ Site Settings"
     files:
@@ -191,18 +335,37 @@ collections:
           - { label: "About Section — Paragraph 1", name: "about_p1", widget: "text" }
           - { label: "About Section — Paragraph 2", name: "about_p2", widget: "text" }
           - { label: "Vision Quote", name: "vision_quote", widget: "string" }
+          - label: "Hero Carousel Photos (up to 5)"
+            name: "hero_photos"
+            widget: "list"
+            max: 5
+            field: { label: "Slide Photo", name: "photo", widget: "image" }
+          - { label: "About Section Photo", name: "about_photo", widget: "image", required: false }
+          - { label: "Vision Banner Background Photo", name: "vision_bg", widget: "image", required: false }
 
       - label: "Contact & Organisation Info"
         name: "contact"
         file: "_data/contact.json"
         fields:
+          - { label: "Contact Page Title", name: "hero_title", widget: "string" }
+          - { label: "Contact Page Subtitle", name: "hero_subtitle", widget: "text" }
           - { label: "Organisation Name", name: "org_name", widget: "string" }
-          - { label: "Tagline", name: "tagline", widget: "string" }
+          - { label: "Footer Tagline", name: "tagline", widget: "string" }
           - { label: "Email Address", name: "email", widget: "string" }
           - { label: "Phone Number", name: "phone", widget: "string" }
           - { label: "Physical Address", name: "address", widget: "text" }
           - { label: "Postal Address", name: "postal", widget: "string", required: false }
+          - { label: "Office Hours", name: "office_hours", widget: "string" }
           - { label: "Founder / Director Name", name: "director", widget: "string" }
+          - { label: "Google Maps Embed URL", name: "maps_url", widget: "string", hint: "Paste the src URL from Google Maps > Share > Embed a map" }
+          - label: "Get Involved Cards (3 cards on contact page)"
+            name: "involve_cards"
+            widget: "list"
+            max: 3
+            fields:
+              - { label: "Emoji Icon", name: "icon", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
 
       - label: "Social Media Links"
         name: "social"
@@ -210,9 +373,9 @@ collections:
         fields:
           - { label: "Facebook URL", name: "facebook", widget: "string" }
           - { label: "Instagram URL", name: "instagram", widget: "string" }
-          - { label: "Twitter/X URL", name: "twitter", widget: "string" }
+          - { label: "Twitter / X URL", name: "twitter", widget: "string" }
           - { label: "WhatsApp Number", name: "whatsapp", widget: "string", hint: "International format e.g. 254712345678" }
-          - { label: "YouTube URL", name: "youtube", widget: "string", required: false }
+          - { label: "YouTube Channel URL", name: "youtube", widget: "string", required: false }
 
       - label: "Donate Page"
         name: "donate"
@@ -226,7 +389,15 @@ collections:
           - { label: "Bank Branch", name: "bank_branch", widget: "string" }
           - { label: "SWIFT / BIC Code", name: "swift", widget: "string", required: false }
           - { label: "M-Pesa Paybill / Till Number", name: "mpesa", widget: "string", required: false }
-          - { label: "PayPal Email", name: "paypal", widget: "string", required: false }
+          - { label: "PayPal Email or Button ID", name: "paypal", widget: "string", required: false }
+
+      - label: "Technical Settings"
+        name: "technical"
+        file: "_data/technical.json"
+        fields:
+          - { label: "Google Analytics ID", name: "ga_id", widget: "string", hint: "e.g. G-XXXXXXXXXX — from analytics.google.com" }
+          - { label: "Formspree ID — Contact Form", name: "formspree_contact", widget: "string", hint: "The code after /f/ in your Formspree form URL" }
+          - { label: "Formspree ID — Volunteer Form", name: "formspree_volunteer", widget: "string", hint: "The code after /f/ in your Formspree volunteer form URL" }
 
       - label: "News Article Order"
         name: "news_index"

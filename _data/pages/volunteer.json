@@ -2,24 +2,90 @@
   "hero_title": "Volunteer With Us",
   "hero_subtitle": "Join our team of dedicated volunteers and make a real difference in the lives of vulnerable children and families in Kisumu.",
   "intro_title": "Why Volunteer with UCDP?",
-  "intro_lead": "Volunteering with UCDP is a chance to work directly with communities in Kisumu, Kenya — contributing your skills to programmes that have been changing lives since 2002.",
+  "intro_lead": "Volunteering with UCDP is a chance to work directly with communities in Kisumu, Kenya \u2014 contributing your skills to programmes that have been changing lives since 2002.",
   "roles": [
-    { "icon": "👩‍🏫", "title": "Education Support", "text": "Support teachers in the Kindergarten Programme, assist with school sponsorship follow-ups, or develop learning materials for children." },
-    { "icon": "🏥", "title": "Healthcare & Wellbeing", "text": "Assist in the Community Clinic, support health education outreach, or contribute to nutrition and hygiene programmes." },
-    { "icon": "🤲", "title": "Street Outreach", "text": "Join our mobile youth work team in the field, building relationships with street children and supporting reintegration efforts." },
-    { "icon": "🧵", "title": "Skills & Training", "text": "Share your professional skills — tailoring, business, IT, or any other area — with our vocational training participants." },
-    { "icon": "📸", "title": "Communications & Media", "text": "Help document our work through photography, video, or written stories that raise awareness and support fundraising." },
-    { "icon": "🌍", "title": "International Partnerships", "text": "Support our relationship with Uhuru e.V. in Germany and other international partners through translation, coordination, or advocacy." }
+    {
+      "icon": "\ud83d\udc69\u200d\ud83c\udfeb",
+      "title": "Education Support",
+      "text": "Support teachers in the Kindergarten Programme, assist with school sponsorship follow-ups, or develop learning materials for children."
+    },
+    {
+      "icon": "\ud83c\udfe5",
+      "title": "Healthcare & Wellbeing",
+      "text": "Assist in the Community Clinic, support health education outreach, or contribute to nutrition and hygiene programmes."
+    },
+    {
+      "icon": "\ud83e\udd32",
+      "title": "Street Outreach",
+      "text": "Join our mobile youth work team in the field, building relationships with street children and supporting reintegration efforts."
+    },
+    {
+      "icon": "\ud83e\uddf5",
+      "title": "Skills & Training",
+      "text": "Share your professional skills \u2014 tailoring, business, IT, or any other area \u2014 with our vocational training participants."
+    },
+    {
+      "icon": "\ud83d\udcf8",
+      "title": "Communications & Media",
+      "text": "Help document our work through photography, video, or written stories that raise awareness and support fundraising."
+    },
+    {
+      "icon": "\ud83c\udf0d",
+      "title": "International Partnerships",
+      "text": "Support our relationship with Uhuru e.V. in Germany and other international partners through translation, coordination, or advocacy."
+    }
   ],
   "expect_title": "What to Expect",
   "expectations": [
-    { "icon": "🏠", "title": "Accommodation support", "text": "We help connect volunteers with safe and affordable accommodation in Kisumu." },
-    { "icon": "👥", "title": "Orientation & induction", "text": "Every volunteer receives a full orientation to UCDP, our programmes, and safeguarding policies." },
-    { "icon": "📋", "title": "Structured placement", "text": "You will be placed in a role that matches your skills and interests, with clear responsibilities and support." },
-    { "icon": "❤️", "title": "A meaningful experience", "text": "You will work alongside our team and community members in ways that create real, lasting impact." }
+    {
+      "icon": "\ud83c\udfe0",
+      "title": "Accommodation support",
+      "text": "We help connect volunteers with safe and affordable accommodation in Kisumu."
+    },
+    {
+      "icon": "\ud83d\udc65",
+      "title": "Orientation & induction",
+      "text": "Every volunteer receives a full orientation to UCDP, our programmes, and safeguarding policies."
+    },
+    {
+      "icon": "\ud83d\udccb",
+      "title": "Structured placement",
+      "text": "You will be placed in a role that matches your skills and interests, with clear responsibilities and support."
+    },
+    {
+      "icon": "\u2764\ufe0f",
+      "title": "A meaningful experience",
+      "text": "You will work alongside our team and community members in ways that create real, lasting impact."
+    }
   ],
   "apply_title": "How to Apply",
-  "apply_text": "To volunteer with UCDP, get in touch via our contact page or email us directly. Tell us about your background, skills, and the dates you are available. We welcome volunteers from all backgrounds — no specific qualifications required, just commitment and a genuine desire to help.",
+  "apply_text": "To volunteer with UCDP, get in touch via our contact page or email us directly. Tell us about your background, skills, and the dates you are available. We welcome volunteers from all backgrounds \u2014 no specific qualifications required, just commitment and a genuine desire to help.",
   "min_duration": "Minimum 4 weeks",
-  "contact_prompt": "Ready to get involved? Reach out to us today."
+  "contact_prompt": "Ready to get involved? Reach out to us today.",
+  "faqs": [
+    {
+      "question": "Do I need prior experience to volunteer?",
+      "answer": "No prior experience is required for most roles. What matters most is a genuine commitment to our mission, a respectful attitude towards the community, and a willingness to learn. For clinical roles, relevant qualifications are required."
+    },
+    {
+      "question": "How long do I need to commit?",
+      "answer": "The minimum recommended placement is two weeks, as shorter periods can be disruptive for the children and communities we serve. Longer placements of 1\u20136 months are encouraged and have a much greater impact."
+    },
+    {
+      "question": "Is accommodation provided?",
+      "answer": "UCDP does not currently provide accommodation directly, but we are happy to advise on affordable and safe housing options in Kisumu for international and out-of-town volunteers. Please ask us when you get in touch."
+    },
+    {
+      "question": "Is there a fee to volunteer?",
+      "answer": "UCDP does not charge a placement fee. Volunteers are responsible for their own travel, accommodation, and living costs. Any direct contribution to our programmes is welcome but entirely optional."
+    },
+    {
+      "question": "Can international volunteers apply?",
+      "answer": "Yes \u2014 we warmly welcome international volunteers. You will need a valid volunteer or tourist visa for Kenya. We can provide a placement letter to support your visa application if needed."
+    },
+    {
+      "question": "Will I receive a reference or certificate?",
+      "answer": "Yes. All volunteers who complete their placement receive an official UCDP certificate of service. We are also happy to provide a reference letter upon request after completion."
+    }
+  ]
 }
