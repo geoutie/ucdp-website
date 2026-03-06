@@ -1,0 +1,62 @@
+{
+  "title": "",
+  "tagline": "",
+  "intro_p1": "Update this paragraph.",
+  "intro_p2": "",
+  "intro_p3": "",
+  "impact_cards": [
+    {
+      "num": "\u2013",
+      "label": "Update this"
+    },
+    {
+      "num": "\u2013",
+      "label": "Update this"
+    },
+    {
+      "num": "\u2013",
+      "label": "Update this"
+    },
+    {
+      "num": "\u2013",
+      "label": "Update this"
+    }
+  ],
+  "quick_facts": [
+    {
+      "label": "Info",
+      "value": "Update this"
+    },
+    {
+      "label": "Info",
+      "value": "Update this"
+    },
+    {
+      "label": "Info",
+      "value": "Update this"
+    },
+    {
+      "label": "Info",
+      "value": "Update this"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Step",
+      "text": "Update this step description."
+    },
+    {
+      "title": "Step",
+      "text": "Update this step description."
+    },
+    {
+      "title": "Step",
+      "text": "Update this step description."
+    },
+    {
+      "title": "Step",
+      "text": "Update this step description."
+    }
+  ],
+  "photo_folder": "photos/mobile-youth-advocacy"
+}

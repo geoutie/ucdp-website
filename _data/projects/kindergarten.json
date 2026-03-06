@@ -1,0 +1,62 @@
+{
+  "title": "Kindergarten Programme",
+  "tagline": "A completely free kindergarten for vulnerable children \u2014 including free daily lunch \u2014 giving every child the best possible start in life.",
+  "intro_p1": "The earliest years of a child's life are the most critical for development. Yet for vulnerable families in Kisumu, quality early childhood education is out of reach. UCDP's Kindergarten Programme removes every barrier \u2014 offering a fully free, nurturing, and stimulating learning environment for young children in the community.",
+  "intro_p2": "<strong>Attendance is completely free</strong> for all children \u2014 every child enrolled comes from a vulnerable background in the community. There are no fees, no hidden costs. In addition, <strong>every child receives a free lunch</strong> during the school day, ensuring they are nourished and ready to learn.",
+  "intro_p3": "Our kindergarten provides a safe, joyful space where children develop literacy, numeracy, social skills, and confidence \u2014 preparing them for a smooth transition into primary school.",
+  "impact_cards": [
+    {
+      "num": "100% Free",
+      "label": "No Fees Whatsoever"
+    },
+    {
+      "num": "Free Lunch",
+      "label": "Every Child, Every Day"
+    },
+    {
+      "num": "Vulnerable",
+      "label": "All Children from Disadvantaged Homes"
+    },
+    {
+      "num": "Daily",
+      "label": "Programme Runs Monday to Friday"
+    }
+  ],
+  "quick_facts": [
+    {
+      "label": "Age Group",
+      "value": "Early childhood (3\u20136 years)"
+    },
+    {
+      "label": "Cost",
+      "value": "Free for all enrolled children"
+    },
+    {
+      "label": "Location",
+      "value": "Manyatta, Kisumu"
+    },
+    {
+      "label": "Focus",
+      "value": "Early learning, play & nutrition"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Enrolment",
+      "text": "Vulnerable children from the community are enrolled completely free of charge \u2014 no fees, no conditions."
+    },
+    {
+      "title": "Daily Learning",
+      "text": "Children participate in a structured daily programme covering literacy, numeracy, creative play, and social development."
+    },
+    {
+      "title": "Free Daily Lunch",
+      "text": "Every child receives a nutritious free lunch during the school day, supporting their health and ability to learn."
+    },
+    {
+      "title": "School Readiness",
+      "text": "By the time they graduate from kindergarten, children are confident, curious, and ready for primary school."
+    }
+  ],
+  "photo_folder": "photos/kindergarten"
+}

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
+  <meta name="cms-data" content="../_data/projects/safe-house.json"/>
   <link rel="icon" type="image/png" href="../logo.png"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Safe House for Street Girls – UCDP</title>
@@ -117,8 +118,8 @@
   <div class="page-hero">
     <div class="breadcrumb"><a href="../index.html">Home</a> <span>›</span> <a href="../projects.html">Projects</a> <span>›</span> <span>Safe House for Street Girls</span>
     </div>
-    <h1>Safe House for Street Girls</h1>
-    <p>A safe refuge for street girls and their children — including second-generation street children — offering shelter, care, and a path forward.</p>
+    <h1><span data-cms="title">Safe House for Street Girls</span></h1>
+    <p><span data-cms="tagline">A safe refuge for street girls and their children — including second-generation street children — offering shelter, care, and a path forward.</span></p>
   </div>
 
   <section>
@@ -127,11 +128,11 @@
         <span class="section-tag">About This Project</span>
         <h2 class="section-title">Safe House for Street Girls</h2>
 
-        <p>Girls on the streets face unique and heightened risks — exploitation, gender-based violence, and vulnerability to abuse. For many, the streets are the only option when home is unsafe or non-existent. UCDP's Safe House was established to provide these girls with a dignified, secure, and nurturing alternative.</p>
+        <p data-cms="intro_p1">Girls on the streets face unique and heightened risks — exploitation, gender-based violence, and vulnerability to abuse. For many, the streets are the only option when home is unsafe or non-existent. UCDP's Safe House was established to provide these girls with a dignified, secure, and nurturing alternative.</p>
         <p>Our Safe House provides shelter for girls rescued from the streets or referred through our street outreach programme. Importantly, the Safe House also accommodates <strong>girls together with their children</strong> — because one of the core reasons the Safe House was established was the reality of a <strong>second generation of children being born on the streets</strong>. We do not separate mothers from their babies.</p>
-        <p>Residents receive holistic support: safe shelter, nutritious meals, trauma counselling, healthcare access, and pathways into education or vocational training — for both the girls and their children.</p>
+        <p data-cms="intro_p2">Residents receive holistic support: safe shelter, nutritious meals, trauma counselling, healthcare access, and pathways into education or vocational training — for both the girls and their children.</p>
     
-        <div class="impact-cards">
+        <div class="impact-cards" id="cms-impact-cards">
           <div class="impact-card"><div class="num">Safe</div><div class="label">Secure Shelter 24/7</div></div>
           <div class="impact-card"><div class="num">Mothers Too</div><div class="label">Girls & Their Children Housed Together</div></div>
           <div class="impact-card"><div class="num">Holistic</div><div class="label">Care for Every Resident</div></div>
@@ -145,7 +146,7 @@
         </div>
         <div style="background:var(--white); border-radius:14px; padding:24px; border:1px solid rgba(201,160,106,0.18); box-shadow:0 2px 12px rgba(43,26,15,0.05);">
           <div style="font-size:0.65rem; font-weight:800; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold); margin-bottom:16px;">Quick Facts</div>
-          <div style="border-top:1px solid rgba(201,160,106,0.15);">
+          <div id="cms-quick-facts" style="border-top:1px solid rgba(201,160,106,0.15);">
           <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:12px; padding:12px 0; border-bottom:1px solid rgba(201,160,106,0.15);">
             <span style="font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:var(--muted); flex-shrink:0;">Who We Shelter</span>
             <span style="font-size:0.84rem; color:var(--brown); font-weight:600; text-align:right; line-height:1.4;">Street girls, street girls and their children</span>
@@ -173,7 +174,7 @@
     <div class="reveal">
       <span class="section-tag">How It Works</span>
       <h2 class="section-title">Our Approach</h2>
-      <div class="how-steps">
+      <div class="how-steps" id="cms-steps">
         <div class="step">
           <div class="step-num"></div>
           <div class="step-text"><h4>Intake</h4><p>Girls are referred through our street outreach team or partner organisations. Mothers with children are welcomed together — we never separate them.</p></div>
@@ -299,6 +300,7 @@
     </div>
   </footer>
 <script src="../gallery.js"></script>
+  <script src="../cms-loader.js" defer></script>
 
   <script>
   // Hide gallery slots where photo files don't exist yet

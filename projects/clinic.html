@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
+  <meta name="cms-data" content="../_data/projects/clinic.json"/>
   <link rel="icon" type="image/png" href="../logo.png"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Community Clinic – UCDP</title>
@@ -117,8 +118,8 @@
   <div class="page-hero">
     <div class="breadcrumb"><a href="../index.html">Home</a> <span>›</span> <a href="../projects.html">Projects</a> <span>›</span> <span>Community Clinic</span>
     </div>
-    <h1>Community Clinic</h1>
-    <p>A community health facility offering free treatment and medication to everyone who walks through our doors.</p>
+    <h1><span data-cms="title">Community Clinic</span></h1>
+    <p><span data-cms="tagline">A community health facility offering free treatment and medication to everyone who walks through our doors.</span></p>
   </div>
 
   <section>
@@ -127,12 +128,12 @@
         <span class="section-tag">About This Project</span>
         <h2 class="section-title">Community Clinic</h2>
 
-        <p>Access to basic healthcare should not be a privilege. UCDP's Community Clinic is a small but vital health facility serving the Manyatta community and surrounding areas — treating common and simple illnesses, providing essential medication, and referring more serious cases to partner facilities equipped to handle them.</p>
+        <p data-cms="intro_p1">Access to basic healthcare should not be a privilege. UCDP's Community Clinic is a small but vital health facility serving the Manyatta community and surrounding areas — treating common and simple illnesses, providing essential medication, and referring more serious cases to partner facilities equipped to handle them.</p>
         <p><strong>All treatment is completely free of charge</strong> for everyone who visits — no consultation fees, no payment required from anyone.</p>
-        <p>The clinic also houses a <strong>pharmacy</strong>, and all patients who receive treatment are given their medication <strong>free of charge</strong> — removing the common barrier where patients are diagnosed but cannot afford to buy the drugs they need.</p>
+        <p data-cms="intro_p2">The clinic also houses a <strong>pharmacy</strong>, and all patients who receive treatment are given their medication <strong>free of charge</strong> — removing the common barrier where patients are diagnosed but cannot afford to buy the drugs they need.</p>
         <p>For conditions beyond our capacity, our team facilitates <strong>referrals to partner hospitals and health facilities</strong>, ensuring patients continue to receive care without being left to navigate the system alone.</p>
     
-        <div class="impact-cards">
+        <div class="impact-cards" id="cms-impact-cards">
           <div class="impact-card"><div class="num">Free</div><div class="label">Treatment Free for Everyone</div></div>
           <div class="impact-card"><div class="num">Free Meds</div><div class="label">All Treated Patients Get Medication Free</div></div>
           <div class="impact-card"><div class="num">Pharmacy</div><div class="label">On-Site Drug Dispensary</div></div>
@@ -146,7 +147,7 @@
         </div>
         <div style="background:var(--white); border-radius:14px; padding:24px; border:1px solid rgba(201,160,106,0.18); box-shadow:0 2px 12px rgba(43,26,15,0.05);">
           <div style="font-size:0.65rem; font-weight:800; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold); margin-bottom:16px;">Quick Facts</div>
-          <div style="border-top:1px solid rgba(201,160,106,0.15);">
+          <div id="cms-quick-facts" style="border-top:1px solid rgba(201,160,106,0.15);">
           <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:12px; padding:12px 0; border-bottom:1px solid rgba(201,160,106,0.15);">
             <span style="font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:var(--muted); flex-shrink:0;">Who We Serve</span>
             <span style="font-size:0.84rem; color:var(--brown); font-weight:600; text-align:right; line-height:1.4;">Everyone — all treatment is free</span>
@@ -174,7 +175,7 @@
     <div class="reveal">
       <span class="section-tag">How It Works</span>
       <h2 class="section-title">Our Approach</h2>
-      <div class="how-steps">
+      <div class="how-steps" id="cms-steps">
         <div class="step">
           <div class="step-num"></div>
           <div class="step-text"><h4>Consultation</h4><p>Patients walk in and are seen by our health workers. Children under 18 are treated at no charge whatsoever.</p></div>
@@ -300,6 +301,7 @@
     </div>
   </footer>
 <script src="../gallery.js"></script>
+  <script src="../cms-loader.js" defer></script>
 
   <script>
   // Hide gallery slots where photo files don't exist yet

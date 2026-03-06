@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
+  <meta name="cms-data" content="../_data/projects/research-publication.json"/>
   <link rel="icon" type="image/png" href="../logo.png"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tailoring & Dressmaking Course – UCDP</title>
@@ -117,8 +118,8 @@
   <div class="page-hero">
     <div class="breadcrumb"><a href="../index.html">Home</a> <span>›</span> <a href="../projects.html">Projects</a> <span>›</span> <span>Research & Publication</span>
     </div>
-    <h1>Research & Publication</h1>
-    <p>Generating evidence-based knowledge about community issues to inform better programmes, stronger advocacy, and lasting change.</p>
+    <h1><span data-cms="title">Research & Publication</span></h1>
+    <p><span data-cms="tagline">Generating evidence-based knowledge about community issues to inform better programmes, stronger advocacy, and lasting change.</span></p>
   </div>
 
   <section>
@@ -129,13 +130,13 @@
         
 
 
-        <p>Effective development work is built on evidence. UCDP's Research and Publication programme ensures that our interventions — and our advocacy — are grounded in rigorous, context-specific knowledge about the communities we serve.</p>
+        <p data-cms="intro_p1">Effective development work is built on evidence. UCDP's Research and Publication programme ensures that our interventions — and our advocacy — are grounded in rigorous, context-specific knowledge about the communities we serve.</p>
         <p>We conduct and commission research on issues affecting vulnerable children, street youth, community health, and social welfare in Kisumu and the wider region. Our findings are documented, published, and shared with partners, government bodies, and the wider development community to inform better policy and practice.</p>
-        <p>Through our publications, we also share lessons learned from our own programmes — contributing to the growing body of knowledge on community development in Kenya and East Africa. Our research gives a voice to data that would otherwise remain hidden, and turns lived experience into actionable knowledge.</p>
+        <p data-cms="intro_p2">Through our publications, we also share lessons learned from our own programmes — contributing to the growing body of knowledge on community development in Kenya and East Africa. Our research gives a voice to data that would otherwise remain hidden, and turns lived experience into actionable knowledge.</p>
     
     
     
-        <div class="impact-cards">
+        <div class="impact-cards" id="cms-impact-cards">
           <div class="impact-card"><div class="num">Evidence</div><div class="label">Based Programmes & Advocacy</div></div>
           <div class="impact-card"><div class="num">Published</div><div class="label">Findings Shared Widely</div></div>
           <div class="impact-card"><div class="num">Local</div><div class="label">Context-Specific Research</div></div>
@@ -149,7 +150,7 @@
         </div>
         <div style="background:var(--white); border-radius:14px; padding:24px; border:1px solid rgba(201,160,106,0.18); box-shadow:0 2px 12px rgba(43,26,15,0.05);">
           <div style="font-size:0.65rem; font-weight:800; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold); margin-bottom:16px;">Quick Facts</div>
-          <div style="border-top:1px solid rgba(201,160,106,0.15);">
+          <div id="cms-quick-facts" style="border-top:1px solid rgba(201,160,106,0.15);">
           <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:12px; padding:12px 0; border-bottom:1px solid rgba(201,160,106,0.15);">
             <span style="font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:var(--muted); flex-shrink:0;">Purpose</span>
             <span style="font-size:0.84rem; color:var(--brown); font-weight:600; text-align:right; line-height:1.4;">Evidence-based advocacy & learning</span>
@@ -177,7 +178,7 @@
     <div class="reveal">
       <span class="section-tag">How It Works</span>
       <h2 class="section-title">Our Approach</h2>
-      <div class="how-steps">
+      <div class="how-steps" id="cms-steps">
         <div class="step">
           <div class="step-num"></div>
           <div class="step-text"><h4>Research Design</h4><p>We identify key questions and gaps in knowledge affecting our communities and design appropriate research methodologies.</p></div>
@@ -295,6 +296,7 @@
     </div>
   </footer>
 <script src="../gallery.js"></script>
+  <script src="../cms-loader.js" defer></script>
 
   <script>
   // Hide gallery slots where photo files don't exist yet

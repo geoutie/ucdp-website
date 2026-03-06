@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
+  <meta name="cms-data" content="../_data/projects/kindergarten.json"/>
   <link rel="icon" type="image/png" href="../logo.png"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Kindergarten Programme – UCDP</title>
@@ -117,8 +118,8 @@
   <div class="page-hero">
     <div class="breadcrumb"><a href="../index.html">Home</a> <span>›</span> <a href="../projects.html">Projects</a> <span>›</span> <span>Kindergarten Programme</span>
     </div>
-    <h1>Kindergarten Programme</h1>
-    <p>A completely free kindergarten for vulnerable children — including free daily lunch — giving every child the best possible start in life.</p>
+    <h1><span data-cms="title">Kindergarten Programme</span></h1>
+    <p><span data-cms="tagline">A completely free kindergarten for vulnerable children — including free daily lunch — giving every child the best possible start in life.</span></p>
   </div>
 
   <section>
@@ -127,11 +128,11 @@
         <span class="section-tag">About This Project</span>
         <h2 class="section-title">Kindergarten Programme</h2>
 
-        <p>The earliest years of a child's life are the most critical for development. Yet for vulnerable families in Kisumu, quality early childhood education is out of reach. UCDP's Kindergarten Programme removes every barrier — offering a fully free, nurturing, and stimulating learning environment for young children in the community.</p>
+        <p data-cms="intro_p1">The earliest years of a child's life are the most critical for development. Yet for vulnerable families in Kisumu, quality early childhood education is out of reach. UCDP's Kindergarten Programme removes every barrier — offering a fully free, nurturing, and stimulating learning environment for young children in the community.</p>
         <p><strong>Attendance is completely free</strong> for all children — every child enrolled comes from a vulnerable background in the community. There are no fees, no hidden costs. In addition, <strong>every child receives a free lunch</strong> during the school day, ensuring they are nourished and ready to learn.</p>
-        <p>Our kindergarten provides a safe, joyful space where children develop literacy, numeracy, social skills, and confidence — preparing them for a smooth transition into primary school.</p>
+        <p data-cms="intro_p2">Our kindergarten provides a safe, joyful space where children develop literacy, numeracy, social skills, and confidence — preparing them for a smooth transition into primary school.</p>
     
-        <div class="impact-cards">
+        <div class="impact-cards" id="cms-impact-cards">
           <div class="impact-card"><div class="num">100% Free</div><div class="label">No Fees Whatsoever</div></div>
           <div class="impact-card"><div class="num">Free Lunch</div><div class="label">Every Child, Every Day</div></div>
           <div class="impact-card"><div class="num">Vulnerable</div><div class="label">All Children from Disadvantaged Homes</div></div>
@@ -145,7 +146,7 @@
         </div>
         <div style="background:var(--white); border-radius:14px; padding:24px; border:1px solid rgba(201,160,106,0.18); box-shadow:0 2px 12px rgba(43,26,15,0.05);">
           <div style="font-size:0.65rem; font-weight:800; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold); margin-bottom:16px;">Quick Facts</div>
-          <div style="border-top:1px solid rgba(201,160,106,0.15);">
+          <div id="cms-quick-facts" style="border-top:1px solid rgba(201,160,106,0.15);">
           <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:12px; padding:12px 0; border-bottom:1px solid rgba(201,160,106,0.15);">
             <span style="font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:var(--muted); flex-shrink:0;">Age Group</span>
             <span style="font-size:0.84rem; color:var(--brown); font-weight:600; text-align:right; line-height:1.4;">Early childhood (3–6 years)</span>
@@ -173,7 +174,7 @@
     <div class="reveal">
       <span class="section-tag">How It Works</span>
       <h2 class="section-title">Our Approach</h2>
-      <div class="how-steps">
+      <div class="how-steps" id="cms-steps">
         <div class="step">
           <div class="step-num"></div>
           <div class="step-text"><h4>Enrolment</h4><p>Vulnerable children from the community are enrolled completely free of charge — no fees, no conditions.</p></div>
@@ -299,6 +300,7 @@
     </div>
   </footer>
 <script src="../gallery.js"></script>
+  <script src="../cms-loader.js" defer></script>
 
   <script>
   // Hide gallery slots where photo files don't exist yet

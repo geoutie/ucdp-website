@@ -1,0 +1,62 @@
+{
+  "title": "Relief Food Distribution",
+  "tagline": "Nutritional support for malnourished children aged 5 and below \u2014 identified and assessed through our Community Clinic.",
+  "intro_p1": "Malnutrition in early childhood has lifelong consequences \u2014 stunting physical growth, impairing brain development, and reducing a child's ability to learn and thrive. In the low-income communities of Kisumu, many families simply cannot provide adequate nutrition for their young children.",
+  "intro_p2": "UCDP's Relief Food Distribution programme targets <strong>children aged 5 years and below</strong> who are malnourished and vulnerable within the community. Rather than a blanket distribution, we take a <strong>clinical approach</strong>: children are assessed through our Community Clinic, where health workers identify and confirm cases of malnutrition before food relief is provided.",
+  "intro_p3": "This ensures that our limited resources reach those who need them most, and that each child's nutritional progress can be monitored over time.",
+  "impact_cards": [
+    {
+      "num": "0\u20135 Years",
+      "label": "Target Age Group"
+    },
+    {
+      "num": "Clinic-Assessed",
+      "label": "Every Beneficiary Screened"
+    },
+    {
+      "num": "Free",
+      "label": "Cost to Families"
+    },
+    {
+      "num": "Monitored",
+      "label": "Nutritional Progress Tracked"
+    }
+  ],
+  "quick_facts": [
+    {
+      "label": "Who Benefits",
+      "value": "Children aged 5 and below"
+    },
+    {
+      "label": "What We Provide",
+      "value": "Food packages for families in need"
+    },
+    {
+      "label": "Location",
+      "value": "Kisumu County"
+    },
+    {
+      "label": "Goal",
+      "value": "Reduce childhood hunger & malnutrition"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Clinical Assessment",
+      "text": "Children are brought to our Community Clinic where health workers assess and confirm malnutrition before any food relief is given."
+    },
+    {
+      "title": "Identification of Beneficiaries",
+      "text": "Assessed and confirmed malnourished children aged 5 and below are registered as beneficiaries."
+    },
+    {
+      "title": "Food Relief Distribution",
+      "text": "Food packages are provided to the families of registered children, free of charge."
+    },
+    {
+      "title": "Follow-Up & Monitoring",
+      "text": "We follow up regularly through the clinic to monitor each child's nutritional recovery and adjust support accordingly."
+    }
+  ],
+  "photo_folder": "photos/relief-food"
+}

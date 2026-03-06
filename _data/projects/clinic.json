@@ -1,0 +1,62 @@
+{
+  "title": "Community Clinic",
+  "tagline": "A community health facility offering free treatment and medication to everyone who walks through our doors.",
+  "intro_p1": "Access to basic healthcare should not be a privilege. UCDP's Community Clinic is a small but vital health facility serving the Manyatta community and surrounding areas \u2014 treating common and simple illnesses, providing essential medication, and referring more serious cases to partner facilities equipped to handle them.",
+  "intro_p2": "<strong>All treatment is completely free of charge</strong> for everyone who visits \u2014 no consultation fees, no payment required from anyone.",
+  "intro_p3": "The clinic also houses a <strong>pharmacy</strong>, and all patients who receive treatment are given their medication <strong>free of charge</strong> \u2014 removing the common barrier where patients are diagnosed but cannot afford to buy the drugs they need.",
+  "impact_cards": [
+    {
+      "num": "Free",
+      "label": "Treatment Free for Everyone"
+    },
+    {
+      "num": "Free Meds",
+      "label": "All Treated Patients Get Medication Free"
+    },
+    {
+      "num": "Pharmacy",
+      "label": "On-Site Drug Dispensary"
+    },
+    {
+      "num": "Referrals",
+      "label": "For Cases Beyond Our Capacity"
+    }
+  ],
+  "quick_facts": [
+    {
+      "label": "Who We Serve",
+      "value": "Everyone \u2014 all treatment is free"
+    },
+    {
+      "label": "Services",
+      "value": "Consultation, treatment & medication"
+    },
+    {
+      "label": "Pharmacy",
+      "value": "On-site, all medication provided free"
+    },
+    {
+      "label": "Referrals",
+      "value": "To partner hospitals when needed"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Consultation",
+      "text": "Patients walk in and are seen by our health workers. Children under 18 are treated at no charge whatsoever."
+    },
+    {
+      "title": "Treatment",
+      "text": "Simple and common illnesses are diagnosed and treated on-site by our trained health staff."
+    },
+    {
+      "title": "Free Medication",
+      "text": "All patients who receive treatment are given their prescribed medication free of charge from our on-site pharmacy."
+    },
+    {
+      "title": "Referrals",
+      "text": "Cases beyond our facility's capacity are referred to partner hospitals, with our team supporting families through the process."
+    }
+  ],
+  "photo_folder": "photos/clinic"
+}

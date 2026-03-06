@@ -1,0 +1,62 @@
+{
+  "title": "Street Work & Reintegration",
+  "tagline": "Reaching street children across Kisumu \u2014 building trust through patient outreach and guiding them back to safe, stable lives.",
+  "intro_p1": "Street children are among the most vulnerable and invisible members of any urban community. In Kisumu, children end up on the streets for many reasons \u2014 family breakdown, poverty, abuse, or the loss of parents. Without intervention, many become trapped in cycles of survival that put them at serious risk.",
+  "intro_p2": "UCDP's Street Work and Reintegration programme is one of our most long-standing and impactful initiatives. Our team of trained social workers and outreach volunteers go to where street children are \u2014 building genuine trust over time before offering support, services, and a path forward.",
+  "intro_p3": "The ultimate goal is reintegration: connecting children with their families where safe, or with our Safe House and other support systems where family reunification is not possible.",
+  "impact_cards": [
+    {
+      "num": "Outreach",
+      "label": "We Go to Where the Children Are"
+    },
+    {
+      "num": "Trust",
+      "label": "Built Before Any Intervention"
+    },
+    {
+      "num": "Family",
+      "label": "Reintegration is the Goal"
+    },
+    {
+      "num": "Safe House",
+      "label": "For Those Without a Safe Family"
+    }
+  ],
+  "quick_facts": [
+    {
+      "label": "Target Group",
+      "value": "Street children across Kisumu"
+    },
+    {
+      "label": "Approach",
+      "value": "Mobile outreach & relationship-based"
+    },
+    {
+      "label": "Services",
+      "value": "Food, counselling, referral"
+    },
+    {
+      "label": "Goal",
+      "value": "Safe reintegration into community"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Street Outreach",
+      "text": "Our team visits locations where street children gather, making contact and building rapport over time before offering services."
+    },
+    {
+      "title": "Trust Building",
+      "text": "We spend time building genuine trust with each child \u2014 understanding their story and circumstances before any intervention."
+    },
+    {
+      "title": "Counselling & Support",
+      "text": "Children receive trauma-informed counselling, access to food, healthcare referrals, and emotional support."
+    },
+    {
+      "title": "Reintegration",
+      "text": "Where safe, we work towards family reunification. For children without a safe family, we facilitate placement in our Safe House or appropriate settings."
+    }
+  ],
+  "photo_folder": "photos/street-work"
+}

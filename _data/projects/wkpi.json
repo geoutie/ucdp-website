@@ -1,0 +1,62 @@
+{
+  "title": "Western Kenya Peace Initiative (WKPI)",
+  "tagline": "UCDP is a proud partner of the Western Kenya Peace Initiative \u2014 a coalition of 12 organisations working together to promote peace and stability across western Kenya.",
+  "intro_p1": "Peace is the foundation on which all development is built. Without it, communities cannot thrive, children cannot learn, and families cannot flourish. UCDP is a committed partner of the <strong>Western Kenya Peace Initiative (WKPI)</strong> \u2014 a powerful coalition of <strong>12 organisations</strong> working together to promote peace, reduce conflict, and build social cohesion across the western parts of Kenya.",
+  "intro_p2": "The WKPI brings together civil society organisations, community groups, and development actors who share a common commitment to peaceful coexistence in the region. Together, the coalition addresses the root causes of conflict \u2014 including inter-community tensions, resource-based disputes, and ethnic divisions \u2014 through dialogue, mediation, community engagement, and peace education.",
+  "intro_p3": "As a WKPI partner, UCDP contributes its community presence, networks, and expertise in working with vulnerable populations \u2014 particularly street youth and children \u2014 to the coalition's broader peace-building work. We believe that children and youth who are supported, educated, and empowered are less likely to become victims or perpetrators of conflict.",
+  "impact_cards": [
+    {
+      "num": "12",
+      "label": "Partner Organisations in the Coalition"
+    },
+    {
+      "num": "Western",
+      "label": "Kenya Coverage Area"
+    },
+    {
+      "num": "Peace",
+      "label": "Building Through Dialogue & Action"
+    },
+    {
+      "num": "UCDP",
+      "label": "Active Contributing Partner"
+    }
+  ],
+  "quick_facts": [
+    {
+      "label": "Type",
+      "value": "Coalition of organisations"
+    },
+    {
+      "label": "Region",
+      "value": "Western Kenya"
+    },
+    {
+      "label": "Focus",
+      "value": "Peace, reconciliation, stability"
+    },
+    {
+      "label": "Role",
+      "value": "Dialogue, training & mediation"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Coalition Meetings",
+      "text": "WKPI partners meet regularly to coordinate peace-building activities, share intelligence on conflict hotspots, and plan joint interventions."
+    },
+    {
+      "title": "Community Dialogue",
+      "text": "The coalition facilitates community dialogues, bringing together groups in conflict to find common ground and peaceful resolution."
+    },
+    {
+      "title": "Peace Education",
+      "text": "Partners conduct peace education sessions in schools, communities, and youth groups to build a culture of non-violence and dialogue."
+    },
+    {
+      "title": "UCDP's Contribution",
+      "text": "UCDP contributes its community networks, expertise in youth and child welfare, and ground-level presence to the coalition's peace-building work."
+    }
+  ],
+  "photo_folder": "photos/wkpi"
+}

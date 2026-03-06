@@ -1,0 +1,62 @@
+{
+  "title": "Safe House for Street Girls",
+  "tagline": "A safe refuge for street girls and their children \u2014 including second-generation street children \u2014 offering shelter, care, and a path forward.",
+  "intro_p1": "Girls on the streets face unique and heightened risks \u2014 exploitation, gender-based violence, and vulnerability to abuse. For many, the streets are the only option when home is unsafe or non-existent. UCDP's Safe House was established to provide these girls with a dignified, secure, and nurturing alternative.",
+  "intro_p2": "Our Safe House provides shelter for girls rescued from the streets or referred through our street outreach programme. Importantly, the Safe House also accommodates <strong>girls together with their children</strong> \u2014 because one of the core reasons the Safe House was established was the reality of a <strong>second generation of children being born on the streets</strong>. We do not separate mothers from their babies.",
+  "intro_p3": "Residents receive holistic support: safe shelter, nutritious meals, trauma counselling, healthcare access, and pathways into education or vocational training \u2014 for both the girls and their children.",
+  "impact_cards": [
+    {
+      "num": "Safe",
+      "label": "Secure Shelter 24/7"
+    },
+    {
+      "num": "Mothers Too",
+      "label": "Girls & Their Children Housed Together"
+    },
+    {
+      "num": "Holistic",
+      "label": "Care for Every Resident"
+    },
+    {
+      "num": "2nd Gen",
+      "label": "Protecting Children Born on the Streets"
+    }
+  ],
+  "quick_facts": [
+    {
+      "label": "Who We Shelter",
+      "value": "Street girls, street girls and their children"
+    },
+    {
+      "label": "Location",
+      "value": "Kisumu"
+    },
+    {
+      "label": "Services",
+      "value": "Shelter, food, counselling & support"
+    },
+    {
+      "label": "Reintegration",
+      "value": "Back to the community"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Intake",
+      "text": "Girls are referred through our street outreach team or partner organisations. Mothers with children are welcomed together \u2014 we never separate them."
+    },
+    {
+      "title": "Safe Shelter",
+      "text": "Residents are provided with a safe room, meals, hygiene products, and a welcoming community environment."
+    },
+    {
+      "title": "Counselling & Healing",
+      "text": "Every resident has access to trauma-informed counselling to help process their experiences and begin healing."
+    },
+    {
+      "title": "Education & Future Planning",
+      "text": "Residents are supported to re-enter school, join vocational training, or pursue other pathways toward independence \u2014 for themselves and their children."
+    }
+  ],
+  "photo_folder": "photos/safe-house"
+}

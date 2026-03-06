@@ -1,0 +1,62 @@
+{
+  "title": "Sanitary Pads Distribution",
+  "tagline": "Keeping girls under 18 in school \u2014 distributing sanitary pads across all sub-counties in Kisumu County, completely free of charge.",
+  "intro_p1": "Menstruation remains one of the leading causes of school absenteeism for girls in Kenya. Without access to sanitary products, many girls are forced to stay home during their period \u2014 missing critical class time that accumulates over months and years, putting their education and future at risk.",
+  "intro_p2": "UCDP's Sanitary Pads Distribution project directly addresses this barrier. Our target group is <strong>girls under 18 years of age</strong> across Kisumu County. We procure and distribute sanitary pads across <strong>all sub-counties in Kisumu County</strong>, ensuring that no girl has to miss a single day of school because of her period.",
+  "intro_p3": "Beyond distribution, our team conducts menstrual health and hygiene education sessions, helping girls understand their bodies, break stigma, and build confidence in themselves and their education.",
+  "impact_cards": [
+    {
+      "num": "All Sub-Counties",
+      "label": "Covered in Kisumu County"
+    },
+    {
+      "num": "Under 18",
+      "label": "Target Age Group"
+    },
+    {
+      "num": "Monthly",
+      "label": "Distribution Frequency"
+    },
+    {
+      "num": "Free",
+      "label": "Cost to Beneficiaries"
+    }
+  ],
+  "quick_facts": [
+    {
+      "label": "Who Benefits",
+      "value": "Girls under 18"
+    },
+    {
+      "label": "Coverage",
+      "value": "All sub-counties, Kisumu County"
+    },
+    {
+      "label": "Frequency",
+      "value": "Regular distribution drives"
+    },
+    {
+      "label": "Impact",
+      "value": "Keeping girls in school"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Identification",
+      "text": "We identify girls under 18 in need across all sub-counties in Kisumu County, prioritising those from the most vulnerable households."
+    },
+    {
+      "title": "Procurement",
+      "text": "Sanitary pads are sourced and procured, ensuring a consistent, quality supply every month."
+    },
+    {
+      "title": "County-Wide Distribution",
+      "text": "Pads are distributed across all sub-counties in Kisumu County, reaching girls at schools and community collection points."
+    },
+    {
+      "title": "Education",
+      "text": "Alongside distribution, we run hygiene education sessions to empower girls with knowledge about menstrual health."
+    }
+  ],
+  "photo_folder": "photos/sanitary-pads"
+}

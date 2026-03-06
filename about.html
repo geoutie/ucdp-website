@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
+  <meta name="cms-data" content="_data/pages/about.json"/>
   <link rel="icon" type="image/png" href="logo.png"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About Us – UCDP</title>
@@ -146,8 +147,8 @@
   <!-- PAGE HERO -->
   <div class="page-hero">
     <div class="breadcrumb"><a href="index.html">Home</a> <span>›</span> <span>About Us</span></div>
-    <h1>About Uhuru Community<br/>Development Project</h1>
-    <p>Over two decades of walking alongside the most vulnerable children and families in Kisumu, West Kenya.</p>
+    <h1 data-cms="hero_title">About Uhuru Community<br/>Development Project</h1>
+    <p data-cms="hero_subtitle">Over two decades of walking alongside the most vulnerable children and families in Kisumu, West Kenya.</p>
   </div>
 
   <!-- WHO WE ARE -->
@@ -155,8 +156,8 @@
     <div class="about-body reveal">
       <div>
         <span class="section-tag">Our Story</span>
-        <h2 class="section-title">Born from a Vision for Children</h2>
-        <p class="section-lead">The Uhuru Community Development Project (UCDP) was founded in 2002 by Davies Okombo, a professional and trained Kenyan social worker, with a clear and urgent mission: to support destitute, hopeless, homeless, and defenseless children in Kisumu, West Kenya.</p>
+        <h2 class="section-title" data-cms="story_title">Born from a Vision for Children</h2>
+        <p class="section-lead" data-cms="story_lead">The Uhuru Community Development Project (UCDP) was founded in 2002 by Davies Okombo, a professional and trained Kenyan social worker, with a clear and urgent mission: to support destitute, hopeless, homeless, and defenseless children in Kisumu, West Kenya.</p>
         <p style="color:var(--muted); line-height:1.8; margin-top:16px; font-size:0.97rem;">The name <strong>"Uhuru"</strong> — meaning <em>freedom</em> in Swahili — reflects the core belief that every child deserves to live and grow in freedom and dignity, regardless of their circumstances.</p>
         <p style="color:var(--muted); line-height:1.8; margin-top:14px; font-size:0.97rem;">UCDP is a politically and denominationally independent non-profit organisation, officially registered with Kenya's Ministry of Gender, Sports, Culture and Social Services as a Community Based Organisation (CBO). Our board consists of 5 permanent members, and practical implementation is led by our founder, Davies Okombo.</p>
       </div>
@@ -175,7 +176,7 @@
     <div class="reveal" style="max-width:800px; margin:0 auto;">
       <span class="section-tag">Our Journey</span>
       <h2 class="section-title">Milestones Over the Years</h2>
-      <div class="timeline">
+      <div class="timeline" id="cms-timeline">
         <div class="timeline-item">
           <div class="timeline-year">2002</div>
           <div class="timeline-content">
@@ -221,7 +222,7 @@
       <span class="section-tag">What Guides Us</span>
       <h2 class="section-title">Our Core Values</h2>
     </div>
-    <div class="values-grid reveal">
+    <div class="values-grid reveal" id="cms-values">
       <div class="value-big"><span class="icon">🤝</span><h4>Community-First</h4><p>We work alongside communities, not above them. Every decision is grounded in the real needs of the people we serve.</p></div>
       <div class="value-big"><span class="icon">🛡️</span><h4>Child Protection</h4><p>The safety, dignity, and wellbeing of every child is non-negotiable — it sits at the heart of everything we do.</p></div>
       <div class="value-big"><span class="icon">🌱</span><h4>Sustainability</h4><p>We focus on long-term, lasting change through education, skills, and community empowerment.</p></div>
@@ -294,6 +295,7 @@
   </footer>
 
   <script src="gallery.js"></script>
+  <script src="cms-loader.js" defer></script>
 
   <script>
   // Mobile nav

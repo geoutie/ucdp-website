@@ -1,0 +1,25 @@
+{
+  "hero_title": "Volunteer With Us",
+  "hero_subtitle": "Join our team of dedicated volunteers and make a real difference in the lives of vulnerable children and families in Kisumu.",
+  "intro_title": "Why Volunteer with UCDP?",
+  "intro_lead": "Volunteering with UCDP is a chance to work directly with communities in Kisumu, Kenya — contributing your skills to programmes that have been changing lives since 2002.",
+  "roles": [
+    { "icon": "👩‍🏫", "title": "Education Support", "text": "Support teachers in the Kindergarten Programme, assist with school sponsorship follow-ups, or develop learning materials for children." },
+    { "icon": "🏥", "title": "Healthcare & Wellbeing", "text": "Assist in the Community Clinic, support health education outreach, or contribute to nutrition and hygiene programmes." },
+    { "icon": "🤲", "title": "Street Outreach", "text": "Join our mobile youth work team in the field, building relationships with street children and supporting reintegration efforts." },
+    { "icon": "🧵", "title": "Skills & Training", "text": "Share your professional skills — tailoring, business, IT, or any other area — with our vocational training participants." },
+    { "icon": "📸", "title": "Communications & Media", "text": "Help document our work through photography, video, or written stories that raise awareness and support fundraising." },
+    { "icon": "🌍", "title": "International Partnerships", "text": "Support our relationship with Uhuru e.V. in Germany and other international partners through translation, coordination, or advocacy." }
+  ],
+  "expect_title": "What to Expect",
+  "expectations": [
+    { "icon": "🏠", "title": "Accommodation support", "text": "We help connect volunteers with safe and affordable accommodation in Kisumu." },
+    { "icon": "👥", "title": "Orientation & induction", "text": "Every volunteer receives a full orientation to UCDP, our programmes, and safeguarding policies." },
+    { "icon": "📋", "title": "Structured placement", "text": "You will be placed in a role that matches your skills and interests, with clear responsibilities and support." },
+    { "icon": "❤️", "title": "A meaningful experience", "text": "You will work alongside our team and community members in ways that create real, lasting impact." }
+  ],
+  "apply_title": "How to Apply",
+  "apply_text": "To volunteer with UCDP, get in touch via our contact page or email us directly. Tell us about your background, skills, and the dates you are available. We welcome volunteers from all backgrounds — no specific qualifications required, just commitment and a genuine desire to help.",
+  "min_duration": "Minimum 4 weeks",
+  "contact_prompt": "Ready to get involved? Reach out to us today."
+}

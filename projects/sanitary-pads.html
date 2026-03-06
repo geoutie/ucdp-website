@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
+  <meta name="cms-data" content="../_data/projects/sanitary-pads.json"/>
   <link rel="icon" type="image/png" href="../logo.png"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sanitary Pads Distribution – UCDP</title>
@@ -117,8 +118,8 @@
   <div class="page-hero">
     <div class="breadcrumb"><a href="../index.html">Home</a> <span>›</span> <a href="../projects.html">Projects</a> <span>›</span> <span>Sanitary Pads Distribution</span>
     </div>
-    <h1>Sanitary Pads Distribution</h1>
-    <p>Keeping girls under 18 in school — distributing sanitary pads across all sub-counties in Kisumu County, completely free of charge.</p>
+    <h1><span data-cms="title">Sanitary Pads Distribution</span></h1>
+    <p><span data-cms="tagline">Keeping girls under 18 in school — distributing sanitary pads across all sub-counties in Kisumu County, completely free of charge.</span></p>
   </div>
 
   <section>
@@ -127,11 +128,11 @@
         <span class="section-tag">About This Project</span>
         <h2 class="section-title">Sanitary Pads Distribution</h2>
 
-        <p>Menstruation remains one of the leading causes of school absenteeism for girls in Kenya. Without access to sanitary products, many girls are forced to stay home during their period — missing critical class time that accumulates over months and years, putting their education and future at risk.</p>
+        <p data-cms="intro_p1">Menstruation remains one of the leading causes of school absenteeism for girls in Kenya. Without access to sanitary products, many girls are forced to stay home during their period — missing critical class time that accumulates over months and years, putting their education and future at risk.</p>
         <p>UCDP's Sanitary Pads Distribution project directly addresses this barrier. Our target group is <strong>girls under 18 years of age</strong> across Kisumu County. We procure and distribute sanitary pads across <strong>all sub-counties in Kisumu County</strong>, ensuring that no girl has to miss a single day of school because of her period.</p>
-        <p>Beyond distribution, our team conducts menstrual health and hygiene education sessions, helping girls understand their bodies, break stigma, and build confidence in themselves and their education.</p>
+        <p data-cms="intro_p2">Beyond distribution, our team conducts menstrual health and hygiene education sessions, helping girls understand their bodies, break stigma, and build confidence in themselves and their education.</p>
     
-        <div class="impact-cards">
+        <div class="impact-cards" id="cms-impact-cards">
           <div class="impact-card"><div class="num">All Sub-Counties</div><div class="label">Covered in Kisumu County</div></div>
           <div class="impact-card"><div class="num">Under 18</div><div class="label">Target Age Group</div></div>
           <div class="impact-card"><div class="num">Monthly</div><div class="label">Distribution Frequency</div></div>
@@ -145,7 +146,7 @@
         </div>
         <div style="background:var(--white); border-radius:14px; padding:24px; border:1px solid rgba(201,160,106,0.18); box-shadow:0 2px 12px rgba(43,26,15,0.05);">
           <div style="font-size:0.65rem; font-weight:800; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold); margin-bottom:16px;">Quick Facts</div>
-          <div style="border-top:1px solid rgba(201,160,106,0.15);">
+          <div id="cms-quick-facts" style="border-top:1px solid rgba(201,160,106,0.15);">
           <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:12px; padding:12px 0; border-bottom:1px solid rgba(201,160,106,0.15);">
             <span style="font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:var(--muted); flex-shrink:0;">Who Benefits</span>
             <span style="font-size:0.84rem; color:var(--brown); font-weight:600; text-align:right; line-height:1.4;">Girls under 18</span>
@@ -173,7 +174,7 @@
     <div class="reveal">
       <span class="section-tag">How It Works</span>
       <h2 class="section-title">Our Approach</h2>
-      <div class="how-steps">
+      <div class="how-steps" id="cms-steps">
         <div class="step">
           <div class="step-num"></div>
           <div class="step-text"><h4>Identification</h4><p>We identify girls under 18 in need across all sub-counties in Kisumu County, prioritising those from the most vulnerable households.</p></div>
@@ -299,6 +300,7 @@
     </div>
   </footer>
 <script src="../gallery.js"></script>
+  <script src="../cms-loader.js" defer></script>
 
   <script>
   // Hide gallery slots where photo files don't exist yet

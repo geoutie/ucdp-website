@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
+  <meta name="cms-data" content="../_data/projects/school-sponsorship.json"/>
   <link rel="icon" type="image/png" href="../logo.png"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Senior School Sponsorship Programme – UCDP</title>
@@ -117,8 +118,8 @@
   <div class="page-hero">
     <div class="breadcrumb"><a href="../index.html">Home</a> <span>›</span> <a href="../projects.html">Projects</a> <span>›</span> <span>Senior School Sponsorship Programme</span>
     </div>
-    <h1>Senior School Sponsorship Programme</h1>
-    <p>Sponsoring school fees for needy students across Kisumu County — covering the full 3 years of senior school.</p>
+    <h1><span data-cms="title">Senior School Sponsorship Programme</span></h1>
+    <p><span data-cms="tagline">Sponsoring school fees for needy students across Kisumu County — covering the full 3 years of senior school.</span></p>
   </div>
 
   <section>
@@ -127,11 +128,11 @@
         <span class="section-tag">About This Project</span>
         <h2 class="section-title">Senior School Sponsorship Programme</h2>
 
-        <p>Secondary school education is a turning point in a young person's life — but for many families in Kisumu County, the cost of school fees is simply out of reach. Without support, talented and hardworking students are forced to drop out, closing the door on their future before it has even opened.</p>
+        <p data-cms="intro_p1">Secondary school education is a turning point in a young person's life — but for many families in Kisumu County, the cost of school fees is simply out of reach. Without support, talented and hardworking students are forced to drop out, closing the door on their future before it has even opened.</p>
         <p>UCDP's Senior School Sponsorship Programme focuses specifically on <strong>school fee sponsorship</strong>. Needy students within the community and across Kisumu County are assessed, and those successfully selected receive their <strong>full school fees paid</strong> throughout their time in senior (secondary) school.</p>
-        <p>The selection process is thorough and fair — prioritising genuine financial need alongside the student's commitment to their education. Once enrolled in the programme, sponsored students are supported until they complete their secondary schooling.</p>
+        <p data-cms="intro_p2">The selection process is thorough and fair — prioritising genuine financial need alongside the student's commitment to their education. Once enrolled in the programme, sponsored students are supported until they complete their secondary schooling.</p>
     
-        <div class="impact-cards">
+        <div class="impact-cards" id="cms-impact-cards">
           <div class="impact-card"><div class="num">Fees Only</div><div class="label">Full School Fee Sponsorship</div></div>
           <div class="impact-card"><div class="num">Kisumu County</div><div class="label">Coverage Area</div></div>
           <div class="impact-card"><div class="num">Assessed</div><div class="label">Fair & Transparent Selection</div></div>
@@ -145,7 +146,7 @@
         </div>
         <div style="background:var(--white); border-radius:14px; padding:24px; border:1px solid rgba(201,160,106,0.18); box-shadow:0 2px 12px rgba(43,26,15,0.05);">
           <div style="font-size:0.65rem; font-weight:800; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold); margin-bottom:16px;">Quick Facts</div>
-          <div style="border-top:1px solid rgba(201,160,106,0.15);">
+          <div id="cms-quick-facts" style="border-top:1px solid rgba(201,160,106,0.15);">
           <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:12px; padding:12px 0; border-bottom:1px solid rgba(201,160,106,0.15);">
             <span style="font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:var(--muted); flex-shrink:0;">Who We Support</span>
             <span style="font-size:0.84rem; color:var(--brown); font-weight:600; text-align:right; line-height:1.4;">Senior school students only</span>
@@ -173,7 +174,7 @@
     <div class="reveal">
       <span class="section-tag">How It Works</span>
       <h2 class="section-title">Our Approach</h2>
-      <div class="how-steps">
+      <div class="how-steps" id="cms-steps">
         <div class="step">
           <div class="step-num"></div>
           <div class="step-text"><h4>Application & Assessment</h4><p>Needy students from the community and across Kisumu County are identified and assessed for financial need and commitment to education.</p></div>
@@ -299,6 +300,7 @@
     </div>
   </footer>
 <script src="../gallery.js"></script>
+  <script src="../cms-loader.js" defer></script>
 
   <script>
   // Hide gallery slots where photo files don't exist yet

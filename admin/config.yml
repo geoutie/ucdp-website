@@ -2,8 +2,9 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "photos/news"
-public_folder: "/photos/news"
+# ── MEDIA — upload photos to any folder ──
+media_folder: "photos"
+public_folder: "/photos"
 
 # ── COLLECTIONS ──
 collections:
@@ -19,14 +20,155 @@ collections:
     extension: "json"
     format: "json"
     summary: "{{title}} — {{date}}"
-    sortable_fields: ["date", "title"]
     fields:
-      - { label: "Title", name: "title", widget: "string", hint: "The headline of this news article" }
-      - { label: "Date", name: "date", widget: "date", format: "MMMM YYYY", hint: "e.g. January 2026" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "date", format: "MMMM YYYY" }
       - { label: "Category", name: "category", widget: "select", options: ["Programme Update", "Kindergarten", "WKPI", "Tailoring", "Clinic", "Safe House", "School Sponsorship", "Sanitary Pads", "Relief Food", "Street Work", "General"] }
       - { label: "Short Summary", name: "summary", widget: "text", hint: "1-2 sentences shown on the news listing page" }
-      - { label: "Cover Image", name: "image", widget: "image", required: false, hint: "Upload a photo for this article" }
-      - { label: "Article Content", name: "content", widget: "markdown", hint: "Full article text. Use the toolbar to add headings, bold, lists, etc." }
+      - { label: "Cover Image", name: "image", widget: "image", required: false }
+      - { label: "Article Content", name: "content", widget: "markdown" }
+
+  # ── PROJECT PAGES ──
+  - name: "projects"
+    label: "🏗️ Project Pages"
+    label_singular: "Project"
+    files:
+      - label: "Mobile Youth Work & Child Advocacy"
+        name: "mobile-youth-advocacy"
+        file: "_data/projects/mobile-youth-advocacy.json"
+        fields: &project_fields
+          - { label: "Page Title", name: "title", widget: "string" }
+          - { label: "Page Tagline", name: "tagline", widget: "text" }
+          - { label: "Main Paragraph 1", name: "intro_p1", widget: "text" }
+          - { label: "Main Paragraph 2", name: "intro_p2", widget: "text", required: false }
+          - { label: "Main Paragraph 3", name: "intro_p3", widget: "text", required: false }
+          - label: "Impact Cards (4 numbers/stats)"
+            name: "impact_cards"
+            widget: "list"
+            max: 4
+            fields:
+              - { label: "Number / Word", name: "num", widget: "string", hint: "e.g. 2,400 or 100% Free" }
+              - { label: "Label", name: "label", widget: "string" }
+          - label: "Quick Facts (sidebar)"
+            name: "quick_facts"
+            widget: "list"
+            max: 4
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Value", name: "value", widget: "string" }
+          - label: "How It Works Steps"
+            name: "steps"
+            widget: "list"
+            max: 5
+            fields:
+              - { label: "Step Title", name: "title", widget: "string" }
+              - { label: "Step Description", name: "text", widget: "text" }
+
+      - label: "Safe House for Street Girls"
+        name: "safe-house"
+        file: "_data/projects/safe-house.json"
+        fields: *project_fields
+
+      - label: "Sanitary Pads Programme"
+        name: "sanitary-pads"
+        file: "_data/projects/sanitary-pads.json"
+        fields: *project_fields
+
+      - label: "Relief Food Programme"
+        name: "relief-food"
+        file: "_data/projects/relief-food.json"
+        fields: *project_fields
+
+      - label: "School Sponsorship"
+        name: "school-sponsorship"
+        file: "_data/projects/school-sponsorship.json"
+        fields: *project_fields
+
+      - label: "Street Work"
+        name: "street-work"
+        file: "_data/projects/street-work.json"
+        fields: *project_fields
+
+      - label: "Lobby & Advocacy"
+        name: "lobby-advocacy"
+        file: "_data/projects/lobby-advocacy.json"
+        fields: *project_fields
+
+      - label: "Research & Publication"
+        name: "research-publication"
+        file: "_data/projects/research-publication.json"
+        fields: *project_fields
+
+      - label: "Kindergarten Programme"
+        name: "kindergarten"
+        file: "_data/projects/kindergarten.json"
+        fields: *project_fields
+
+      - label: "Tailoring & Dressmaking"
+        name: "tailoring"
+        file: "_data/projects/tailoring.json"
+        fields: *project_fields
+
+      - label: "Community Clinic"
+        name: "clinic"
+        file: "_data/projects/clinic.json"
+        fields: *project_fields
+
+      - label: "Western Kenya Peace Initiative (WKPI)"
+        name: "wkpi"
+        file: "_data/projects/wkpi.json"
+        fields: *project_fields
+
+  # ── ABOUT PAGE ──
+  - name: "about"
+    label: "👥 About Page"
+    files:
+      - label: "About Page"
+        name: "about"
+        file: "_data/pages/about.json"
+        fields:
+          - { label: "Page Title", name: "hero_title", widget: "string" }
+          - { label: "Page Subtitle", name: "hero_subtitle", widget: "text" }
+          - { label: "Our Story — Heading", name: "story_title", widget: "string" }
+          - { label: "Our Story — Lead Paragraph", name: "story_lead", widget: "text" }
+          - { label: "Our Story — Paragraph 1", name: "story_p1", widget: "text" }
+          - { label: "Our Story — Paragraph 2", name: "story_p2", widget: "text" }
+          - label: "Timeline"
+            name: "timeline"
+            widget: "list"
+            fields:
+              - { label: "Year", name: "year", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "text", widget: "text" }
+          - label: "Core Values"
+            name: "values"
+            widget: "list"
+            fields:
+              - { label: "Emoji Icon", name: "icon", widget: "string" }
+              - { label: "Value Name", name: "title", widget: "string" }
+              - { label: "Description", name: "text", widget: "text" }
+
+  # ── VOLUNTEER PAGE ──
+  - name: "volunteer"
+    label: "🙋 Volunteer Page"
+    files:
+      - label: "Volunteer Page"
+        name: "volunteer"
+        file: "_data/pages/volunteer.json"
+        fields:
+          - { label: "Page Title", name: "hero_title", widget: "string" }
+          - { label: "Page Subtitle", name: "hero_subtitle", widget: "text" }
+          - { label: "Intro Heading", name: "intro_title", widget: "string" }
+          - { label: "Intro Lead Text", name: "intro_lead", widget: "text" }
+          - label: "Volunteer Roles"
+            name: "roles"
+            widget: "list"
+            fields:
+              - { label: "Emoji Icon", name: "icon", widget: "string" }
+              - { label: "Role Title", name: "title", widget: "string" }
+              - { label: "Description", name: "text", widget: "text" }
+          - { label: "How to Apply — Text", name: "apply_text", widget: "text" }
+          - { label: "Minimum Duration", name: "min_duration", widget: "string" }
 
   # ── SITE SETTINGS ──
   - name: "settings"
@@ -46,8 +188,8 @@ collections:
             fields:
               - { label: "Number or Word", name: "num", widget: "string" }
               - { label: "Label", name: "label", widget: "string" }
-          - { label: "About Section — Main Paragraph", name: "about_p1", widget: "text" }
-          - { label: "About Section — Second Paragraph", name: "about_p2", widget: "text" }
+          - { label: "About Section — Paragraph 1", name: "about_p1", widget: "text" }
+          - { label: "About Section — Paragraph 2", name: "about_p2", widget: "text" }
           - { label: "Vision Quote", name: "vision_quote", widget: "string" }
 
       - label: "Contact & Organisation Info"
@@ -90,7 +232,7 @@ collections:
         name: "news_index"
         file: "_data/news-index.json"
         fields:
-          - label: "Article Slugs (in order, newest first)"
+          - label: "Article Slugs (newest first)"
             name: "items"
             widget: "list"
-            field: { label: "Slug", name: "slug", widget: "string", hint: "Filename without .json — e.g. new-sanitary-pads-drive" }
+            field: { label: "Slug", name: "slug", widget: "string", hint: "Filename without .json" }

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
+  <meta name="cms-data" content="../_data/projects/street-work.json"/>
   <link rel="icon" type="image/png" href="../logo.png"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Street Work & Reintegration – UCDP</title>
@@ -117,8 +118,8 @@
   <div class="page-hero">
     <div class="breadcrumb"><a href="../index.html">Home</a> <span>›</span> <a href="../projects.html">Projects</a> <span>›</span> <span>Street Work & Reintegration</span>
     </div>
-    <h1>Street Work & Reintegration</h1>
-    <p>Reaching street children across Kisumu — building trust through patient outreach and guiding them back to safe, stable lives.</p>
+    <h1><span data-cms="title">Street Work & Reintegration</span></h1>
+    <p><span data-cms="tagline">Reaching street children across Kisumu — building trust through patient outreach and guiding them back to safe, stable lives.</span></p>
   </div>
 
   <section>
@@ -127,11 +128,11 @@
         <span class="section-tag">About This Project</span>
         <h2 class="section-title">Street Work & Reintegration</h2>
 
-        <p>Street children are among the most vulnerable and invisible members of any urban community. In Kisumu, children end up on the streets for many reasons — family breakdown, poverty, abuse, or the loss of parents. Without intervention, many become trapped in cycles of survival that put them at serious risk.</p>
+        <p data-cms="intro_p1">Street children are among the most vulnerable and invisible members of any urban community. In Kisumu, children end up on the streets for many reasons — family breakdown, poverty, abuse, or the loss of parents. Without intervention, many become trapped in cycles of survival that put them at serious risk.</p>
         <p>UCDP's Street Work and Reintegration programme is one of our most long-standing and impactful initiatives. Our team of trained social workers and outreach volunteers go to where street children are — building genuine trust over time before offering support, services, and a path forward.</p>
-        <p>The ultimate goal is reintegration: connecting children with their families where safe, or with our Safe House and other support systems where family reunification is not possible.</p>
+        <p data-cms="intro_p2">The ultimate goal is reintegration: connecting children with their families where safe, or with our Safe House and other support systems where family reunification is not possible.</p>
     
-        <div class="impact-cards">
+        <div class="impact-cards" id="cms-impact-cards">
           <div class="impact-card"><div class="num">Outreach</div><div class="label">We Go to Where the Children Are</div></div>
           <div class="impact-card"><div class="num">Trust</div><div class="label">Built Before Any Intervention</div></div>
           <div class="impact-card"><div class="num">Family</div><div class="label">Reintegration is the Goal</div></div>
@@ -145,7 +146,7 @@
         </div>
         <div style="background:var(--white); border-radius:14px; padding:24px; border:1px solid rgba(201,160,106,0.18); box-shadow:0 2px 12px rgba(43,26,15,0.05);">
           <div style="font-size:0.65rem; font-weight:800; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold); margin-bottom:16px;">Quick Facts</div>
-          <div style="border-top:1px solid rgba(201,160,106,0.15);">
+          <div id="cms-quick-facts" style="border-top:1px solid rgba(201,160,106,0.15);">
           <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:12px; padding:12px 0; border-bottom:1px solid rgba(201,160,106,0.15);">
             <span style="font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:var(--muted); flex-shrink:0;">Target Group</span>
             <span style="font-size:0.84rem; color:var(--brown); font-weight:600; text-align:right; line-height:1.4;">Street children across Kisumu</span>
@@ -173,7 +174,7 @@
     <div class="reveal">
       <span class="section-tag">How It Works</span>
       <h2 class="section-title">Our Approach</h2>
-      <div class="how-steps">
+      <div class="how-steps" id="cms-steps">
         <div class="step">
           <div class="step-num"></div>
           <div class="step-text"><h4>Street Outreach</h4><p>Our team visits locations where street children gather, making contact and building rapport over time before offering services.</p></div>
@@ -299,6 +300,7 @@
     </div>
   </footer>
 <script src="../gallery.js"></script>
+  <script src="../cms-loader.js" defer></script>
 
   <script>
   // Hide gallery slots where photo files don't exist yet

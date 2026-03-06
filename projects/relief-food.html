@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
+  <meta name="cms-data" content="../_data/projects/relief-food.json"/>
   <link rel="icon" type="image/png" href="../logo.png"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Relief Food Distribution – UCDP</title>
@@ -117,8 +118,8 @@
   <div class="page-hero">
     <div class="breadcrumb"><a href="../index.html">Home</a> <span>›</span> <a href="../projects.html">Projects</a> <span>›</span> <span>Relief Food Distribution</span>
     </div>
-    <h1>Relief Food Distribution</h1>
-    <p>Nutritional support for malnourished children aged 5 and below — identified and assessed through our Community Clinic.</p>
+    <h1><span data-cms="title">Relief Food Distribution</span></h1>
+    <p><span data-cms="tagline">Nutritional support for malnourished children aged 5 and below — identified and assessed through our Community Clinic.</span></p>
   </div>
 
   <section>
@@ -127,11 +128,11 @@
         <span class="section-tag">About This Project</span>
         <h2 class="section-title">Relief Food Distribution</h2>
 
-        <p>Malnutrition in early childhood has lifelong consequences — stunting physical growth, impairing brain development, and reducing a child's ability to learn and thrive. In the low-income communities of Kisumu, many families simply cannot provide adequate nutrition for their young children.</p>
+        <p data-cms="intro_p1">Malnutrition in early childhood has lifelong consequences — stunting physical growth, impairing brain development, and reducing a child's ability to learn and thrive. In the low-income communities of Kisumu, many families simply cannot provide adequate nutrition for their young children.</p>
         <p>UCDP's Relief Food Distribution programme targets <strong>children aged 5 years and below</strong> who are malnourished and vulnerable within the community. Rather than a blanket distribution, we take a <strong>clinical approach</strong>: children are assessed through our Community Clinic, where health workers identify and confirm cases of malnutrition before food relief is provided.</p>
-        <p>This ensures that our limited resources reach those who need them most, and that each child's nutritional progress can be monitored over time.</p>
+        <p data-cms="intro_p2">This ensures that our limited resources reach those who need them most, and that each child's nutritional progress can be monitored over time.</p>
     
-        <div class="impact-cards">
+        <div class="impact-cards" id="cms-impact-cards">
           <div class="impact-card"><div class="num">0–5 Years</div><div class="label">Target Age Group</div></div>
           <div class="impact-card"><div class="num">Clinic-Assessed</div><div class="label">Every Beneficiary Screened</div></div>
           <div class="impact-card"><div class="num">Free</div><div class="label">Cost to Families</div></div>
@@ -145,7 +146,7 @@
         </div>
         <div style="background:var(--white); border-radius:14px; padding:24px; border:1px solid rgba(201,160,106,0.18); box-shadow:0 2px 12px rgba(43,26,15,0.05);">
           <div style="font-size:0.65rem; font-weight:800; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold); margin-bottom:16px;">Quick Facts</div>
-          <div style="border-top:1px solid rgba(201,160,106,0.15);">
+          <div id="cms-quick-facts" style="border-top:1px solid rgba(201,160,106,0.15);">
           <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:12px; padding:12px 0; border-bottom:1px solid rgba(201,160,106,0.15);">
             <span style="font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:var(--muted); flex-shrink:0;">Who Benefits</span>
             <span style="font-size:0.84rem; color:var(--brown); font-weight:600; text-align:right; line-height:1.4;">Children aged 5 and below</span>
@@ -173,7 +174,7 @@
     <div class="reveal">
       <span class="section-tag">How It Works</span>
       <h2 class="section-title">Our Approach</h2>
-      <div class="how-steps">
+      <div class="how-steps" id="cms-steps">
         <div class="step">
           <div class="step-num"></div>
           <div class="step-text"><h4>Clinical Assessment</h4><p>Children are brought to our Community Clinic where health workers assess and confirm malnutrition before any food relief is given.</p></div>
@@ -299,6 +300,7 @@
     </div>
   </footer>
 <script src="../gallery.js"></script>
+  <script src="../cms-loader.js" defer></script>
 
   <script>
   // Hide gallery slots where photo files don't exist yet

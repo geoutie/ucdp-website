@@ -1,0 +1,62 @@
+{
+  "title": "Senior School Sponsorship Programme",
+  "tagline": "Sponsoring school fees for needy students across Kisumu County \u2014 covering the full 3 years of senior school.",
+  "intro_p1": "Secondary school education is a turning point in a young person's life \u2014 but for many families in Kisumu County, the cost of school fees is simply out of reach. Without support, talented and hardworking students are forced to drop out, closing the door on their future before it has even opened.",
+  "intro_p2": "UCDP's Senior School Sponsorship Programme focuses specifically on <strong>school fee sponsorship</strong>. Needy students within the community and across Kisumu County are assessed, and those successfully selected receive their <strong>full school fees paid</strong> throughout their time in senior (secondary) school.",
+  "intro_p3": "The selection process is thorough and fair \u2014 prioritising genuine financial need alongside the student's commitment to their education. Once enrolled in the programme, sponsored students are supported until they complete their secondary schooling.",
+  "impact_cards": [
+    {
+      "num": "Fees Only",
+      "label": "Full School Fee Sponsorship"
+    },
+    {
+      "num": "Kisumu County",
+      "label": "Coverage Area"
+    },
+    {
+      "num": "Assessed",
+      "label": "Fair & Transparent Selection"
+    },
+    {
+      "num": "Full Term",
+      "label": "Supported Through Senior School"
+    }
+  ],
+  "quick_facts": [
+    {
+      "label": "Who We Support",
+      "value": "Senior school students only"
+    },
+    {
+      "label": "What We Cover",
+      "value": "School fees & learning materials"
+    },
+    {
+      "label": "Selection",
+      "value": "Based on financial need & financial need"
+    },
+    {
+      "label": "Goal",
+      "value": "No child excluded from education"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Application & Assessment",
+      "text": "Needy students from the community and across Kisumu County are identified and assessed for financial need and commitment to education."
+    },
+    {
+      "title": "Selection",
+      "text": "Successful candidates are selected through a fair and transparent process and officially enrolled in the sponsorship programme."
+    },
+    {
+      "title": "Fee Payment",
+      "text": "School fees are paid directly on behalf of each sponsored student, covering their full time in senior school."
+    },
+    {
+      "title": "Ongoing Support",
+      "text": "Students remain in the programme and continue receiving fee sponsorship until they complete their secondary education."
+    }
+  ],
+  "photo_folder": "photos/school-sponsorship"
+}

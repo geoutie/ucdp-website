@@ -1,0 +1,62 @@
+{
+  "title": "Research & Publication",
+  "tagline": "Generating evidence-based knowledge about community issues to inform better programmes, stronger advocacy, and lasting change.",
+  "intro_p1": "Effective development work is built on evidence. UCDP's Research and Publication programme ensures that our interventions \u2014 and our advocacy \u2014 are grounded in rigorous, context-specific knowledge about the communities we serve.",
+  "intro_p2": "We conduct and commission research on issues affecting vulnerable children, street youth, community health, and social welfare in Kisumu and the wider region. Our findings are documented, published, and shared with partners, government bodies, and the wider development community to inform better policy and practice.",
+  "intro_p3": "Through our publications, we also share lessons learned from our own programmes \u2014 contributing to the growing body of knowledge on community development in Kenya and East Africa. Our research gives a voice to data that would otherwise remain hidden, and turns lived experience into actionable knowledge.",
+  "impact_cards": [
+    {
+      "num": "Evidence",
+      "label": "Based Programmes & Advocacy"
+    },
+    {
+      "num": "Published",
+      "label": "Findings Shared Widely"
+    },
+    {
+      "num": "Local",
+      "label": "Context-Specific Research"
+    },
+    {
+      "num": "Impact",
+      "label": "Driven by Data & Real Stories"
+    }
+  ],
+  "quick_facts": [
+    {
+      "label": "Purpose",
+      "value": "Evidence-based advocacy & learning"
+    },
+    {
+      "label": "Topics",
+      "value": "Child welfare, community health, rights"
+    },
+    {
+      "label": "Output",
+      "value": "Reports, papers, policy briefs"
+    },
+    {
+      "label": "Audience",
+      "value": "NGOs, government, donors & community"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Research Design",
+      "text": "We identify key questions and gaps in knowledge affecting our communities and design appropriate research methodologies."
+    },
+    {
+      "title": "Data Collection",
+      "text": "Research is conducted in the field \u2014 through interviews, surveys, focus groups, and direct observation within our communities."
+    },
+    {
+      "title": "Analysis & Findings",
+      "text": "Data is analysed carefully and translated into clear, actionable findings that reflect the reality on the ground."
+    },
+    {
+      "title": "Publication & Dissemination",
+      "text": "Findings are published and shared with partners, government bodies, and the wider development community to inform policy and practice."
+    }
+  ],
+  "photo_folder": "photos/research-publication"
+}

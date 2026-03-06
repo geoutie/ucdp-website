@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
+  <meta name="cms-data" content="../_data/projects/wkpi.json"/>
   <link rel="icon" type="image/png" href="../logo.png"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tailoring & Dressmaking Course – UCDP</title>
@@ -117,8 +118,8 @@
   <div class="page-hero">
     <div class="breadcrumb"><a href="../index.html">Home</a> <span>›</span> <a href="../projects.html">Projects</a> <span>›</span> <span>Western Kenya Peace Initiative (WKPI)</span>
     </div>
-    <h1>Western Kenya Peace Initiative (WKPI)</h1>
-    <p>UCDP is a proud partner of the Western Kenya Peace Initiative — a coalition of 12 organisations working together to promote peace and stability across western Kenya.</p>
+    <h1><span data-cms="title">Western Kenya Peace Initiative (WKPI)</span></h1>
+    <p><span data-cms="tagline">UCDP is a proud partner of the Western Kenya Peace Initiative — a coalition of 12 organisations working together to promote peace and stability across western Kenya.</span></p>
   </div>
 
   <section>
@@ -129,13 +130,13 @@
         
 
 
-        <p>Peace is the foundation on which all development is built. Without it, communities cannot thrive, children cannot learn, and families cannot flourish. UCDP is a committed partner of the <strong>Western Kenya Peace Initiative (WKPI)</strong> — a powerful coalition of <strong>12 organisations</strong> working together to promote peace, reduce conflict, and build social cohesion across the western parts of Kenya.</p>
+        <p data-cms="intro_p1">Peace is the foundation on which all development is built. Without it, communities cannot thrive, children cannot learn, and families cannot flourish. UCDP is a committed partner of the <strong>Western Kenya Peace Initiative (WKPI)</strong> — a powerful coalition of <strong>12 organisations</strong> working together to promote peace, reduce conflict, and build social cohesion across the western parts of Kenya.</p>
         <p>The WKPI brings together civil society organisations, community groups, and development actors who share a common commitment to peaceful coexistence in the region. Together, the coalition addresses the root causes of conflict — including inter-community tensions, resource-based disputes, and ethnic divisions — through dialogue, mediation, community engagement, and peace education.</p>
-        <p>As a WKPI partner, UCDP contributes its community presence, networks, and expertise in working with vulnerable populations — particularly street youth and children — to the coalition's broader peace-building work. We believe that children and youth who are supported, educated, and empowered are less likely to become victims or perpetrators of conflict.</p>
+        <p data-cms="intro_p2">As a WKPI partner, UCDP contributes its community presence, networks, and expertise in working with vulnerable populations — particularly street youth and children — to the coalition's broader peace-building work. We believe that children and youth who are supported, educated, and empowered are less likely to become victims or perpetrators of conflict.</p>
     
     
     
-        <div class="impact-cards">
+        <div class="impact-cards" id="cms-impact-cards">
           <div class="impact-card"><div class="num">12</div><div class="label">Partner Organisations in the Coalition</div></div>
           <div class="impact-card"><div class="num">Western</div><div class="label">Kenya Coverage Area</div></div>
           <div class="impact-card"><div class="num">Peace</div><div class="label">Building Through Dialogue & Action</div></div>
@@ -149,7 +150,7 @@
         </div>
         <div style="background:var(--white); border-radius:14px; padding:24px; border:1px solid rgba(201,160,106,0.18); box-shadow:0 2px 12px rgba(43,26,15,0.05);">
           <div style="font-size:0.65rem; font-weight:800; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold); margin-bottom:16px;">Quick Facts</div>
-          <div style="border-top:1px solid rgba(201,160,106,0.15);">
+          <div id="cms-quick-facts" style="border-top:1px solid rgba(201,160,106,0.15);">
           <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:12px; padding:12px 0; border-bottom:1px solid rgba(201,160,106,0.15);">
             <span style="font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:var(--muted); flex-shrink:0;">Type</span>
             <span style="font-size:0.84rem; color:var(--brown); font-weight:600; text-align:right; line-height:1.4;">Coalition of organisations</span>
@@ -177,7 +178,7 @@
     <div class="reveal">
       <span class="section-tag">How It Works</span>
       <h2 class="section-title">Our Approach</h2>
-      <div class="how-steps">
+      <div class="how-steps" id="cms-steps">
         <div class="step">
           <div class="step-num"></div>
           <div class="step-text"><h4>Coalition Meetings</h4><p>WKPI partners meet regularly to coordinate peace-building activities, share intelligence on conflict hotspots, and plan joint interventions.</p></div>
@@ -303,6 +304,7 @@
     </div>
   </footer>
 <script src="../gallery.js"></script>
+  <script src="../cms-loader.js" defer></script>
 
   <script>
   // Hide gallery slots where photo files don't exist yet

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
+  <meta name="cms-data" content="_data/contact.json"/>
   <link rel="icon" type="image/png" href="logo.png"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact Us – UCDP</title>
@@ -102,7 +103,7 @@
         </div>
         <div class="contact-item">
           <div class="contact-icon">✉️</div>
-          <div><h4>Email</h4><p><a href="mailto:info@ucdp.org">info@ucdp.org</a></p></div>
+          <div><h4>Email</h4><p><a href="mailto:" data-cms-email><span data-cms-email>info@ucdp.org</span></a></p></div>
         </div>
         <div class="contact-item">
           <div class="contact-icon">🕐</div>
@@ -190,6 +191,7 @@
   </footer>
 
   <script src="gallery.js"></script>
+  <script src="cms-loader.js" defer></script>
 
   <script>
   // Mobile nav
