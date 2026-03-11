@@ -5,6 +5,12 @@ backend:
 media_folder: "photos"
 public_folder: "/photos"
 
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: dcsn8akwq
+    upload_preset: ucdp-cms
+
 collections:
 
   # ════════════════════════════════════════
