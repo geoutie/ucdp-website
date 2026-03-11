@@ -105,7 +105,7 @@
       document.getElementById('art-title').textContent = 'Article not found';
       document.getElementById('art-content').innerHTML = '<p>No article specified. <a href="news.html" style="color:var(--gold)">Return to News →</a></p>';
     } else {
-      fetch('_data/news/' + slug + '.json')
+      fetch('/_data/news/' + slug + '.json')
         .then(r => { if (!r.ok) throw new Error('Not found'); return r.json(); })
         .then(data => {
           // Update page title

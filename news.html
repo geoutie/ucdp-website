@@ -189,23 +189,15 @@
   </div>
 
 
-  <!-- DYNAMIC NEWS — loaded from _data/news/ -->
-  <section id="news-latest">
-    <div class="reveal" style="text-align:center;">
-      <span class="section-tag">Latest</span>
-      <h2 class="section-title">Recent Stories</h2>
+  <!-- COMING SOON -->
+  <section style="text-align:center; padding:80px 6%;">
+    <div class="reveal" style="max-width:520px; margin:0 auto;">
+      <div style="font-size:3rem; margin-bottom:24px; opacity:0.5;">🕐</div>
+      <span class="section-tag">News & Updates</span>
+      <h2 class="section-title" style="margin-top:12px;">Coming Soon</h2>
+      <p style="color:var(--muted); font-size:0.96rem; line-height:1.85;">We are currently setting up our news section. Check back soon for stories, updates, and highlights from our work across Kisumu County.</p>
+      <a href="contact.html" class="btn btn-brown" style="margin-top:28px; display:inline-block;">Get In Touch</a>
     </div>
-    <div class="news-grid reveal" id="news-grid">
-      <div style="grid-column:1/-1; text-align:center; padding:40px; color:var(--muted);">Loading news…</div>
-    </div>
-  </section>
-
-  <section class="archive-section" id="news-archive" style="display:none;">
-    <div class="reveal" style="text-align:center; margin-bottom:48px;">
-      <span class="section-tag">Archive</span>
-      <h2 class="section-title">All Stories</h2>
-    </div>
-    <div class="reveal archive-list" id="archive-list"></div>
   </section>
 
   <footer>
@@ -254,10 +246,10 @@
 
   async function loadNews() {
     try {
-      const indexRes = await fetch('_data/news-index.json');
+      const indexRes = await fetch('/_data/news-index.json');
       const slugs = await indexRes.json();
       const articles = await Promise.all(slugs.map(slug =>
-        fetch('_data/news/' + slug + '.json').then(r => r.json()).then(d => ({...d, slug})).catch(() => null)
+        fetch('/_data/news/' + slug + '.json').then(r => r.json()).then(d => ({...d, slug})).catch(() => null)
       ));
       const valid = articles.filter(Boolean);
       renderNews(valid);
