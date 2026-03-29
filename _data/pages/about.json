@@ -1,10 +1,4 @@
 {
-  "hero_title": "About Uhuru Community Development Project",
-  "hero_subtitle": "Over two decades of walking alongside the most vulnerable children and families in Kisumu, West Kenya.",
-  "story_title": "Born from a Vision for Children",
-  "story_lead": "The Uhuru Community Development Project (UCDP) was founded in 2002 by Davies Okombo, a professional and trained Kenyan social worker, with a clear and urgent mission: to support destitute, hopeless, homeless, and defenseless children in Kisumu, West Kenya.",
-  "story_p1": "The name \"Uhuru\" \u2014 meaning freedom in Swahili \u2014 reflects the core belief that every child deserves to live and grow in freedom and dignity, regardless of their circumstances.",
-  "story_p2": "UCDP is a politically and denominationally independent non-profit organisation, officially registered with Kenya's Ministry of Gender, Sports, Culture and Social Services as a Community Based Organisation (CBO). Our board consists of 5 permanent members, and practical implementation is led by our founder, Davies Okombo.",
   "timeline": [
     {
       "year": "2002",
@@ -19,7 +13,7 @@
     {
       "year": "2005",
       "title": "Partnership with Uhuru e.V. (Germany)",
-      "text": "The German support association \"Uhuru e.V. \u2013 Gemeinsam f\u00fcr Kinder in Kenia\" is founded in T\u00fcbingen, providing crucial international backing."
+      "text": "The German support association \"Uhuru e.V. – Gemeinsam für Kinder in Kenia\" is founded in Tübingen, providing crucial international backing."
     },
     {
       "year": "2010+",
@@ -34,36 +28,42 @@
   ],
   "values": [
     {
-      "icon": "\ud83e\udd1d",
+      "icon": "🤝",
       "title": "Community-First",
       "text": "We work alongside communities, not above them. Every decision is grounded in the real needs of the people we serve."
     },
     {
-      "icon": "\ud83d\udee1\ufe0f",
+      "icon": "🛡️",
       "title": "Child Protection",
-      "text": "The safety, dignity, and wellbeing of every child is non-negotiable \u2014 it sits at the heart of everything we do."
+      "text": "The safety, dignity, and wellbeing of every child is non-negotiable — it sits at the heart of everything we do."
     },
     {
-      "icon": "\ud83c\udf31",
+      "icon": "🌱",
       "title": "Sustainability",
       "text": "We focus on long-term, lasting change through education, skills, and community empowerment."
     },
     {
-      "icon": "\ud83d\udcaa",
+      "icon": "💪",
       "title": "Empowerment",
       "text": "We believe in equipping individuals with tools and knowledge to shape their own futures with confidence."
     },
     {
-      "icon": "\ud83c\udf0d",
+      "icon": "🌍",
       "title": "Partnership",
       "text": "We collaborate openly with local volunteers, international partners, and community members to multiply impact."
     },
     {
-      "icon": "\u2696\ufe0f",
+      "icon": "⚖️",
       "title": "Independence",
-      "text": "We are politically and denominationally independent \u2014 serving all people in our community without discrimination."
+      "text": "We are politically and denominationally independent — serving all people in our community without discrimination."
     }
   ],
+  "story_lead": "The Uhuru Community Development Project (UCDP) was founded in 2002 by Davies Okombo, a professional and trained Kenyan social worker, with a clear and urgent mission: to support destitute, hopeless, homeless, and defenseless children in Kisumu, Kenya.",
   "story_photo": "",
-  "team_photo": ""
+  "story_p1": "The name \"Uhuru\" — meaning freedom in Swahili — reflects the core belief that every child deserves to live and grow in freedom and dignity, regardless of their circumstances.",
+  "story_p2": "UCDP is a politically and denominationally independent non-profit organisation, officially registered with Kenya's Ministry of Gender, Sports, Culture and Social Services as a Community Based Organisation (CBO). Our board consists of 5 permanent members, and practical implementation is led by our founder, Davies Okombo.",
+  "story_title": "Born from a Vision for Children",
+  "team_photo": "",
+  "hero_title": "About Uhuru Community Development Project",
+  "hero_subtitle": "Over two decades of walking alongside the most vulnerable children and families in Kisumu, West Kenya."
 }
